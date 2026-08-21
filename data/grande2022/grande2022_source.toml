@@ -1,0 +1,41 @@
+unique_id = "grande2022"
+citation = "Grande et al. (2022)"
+date = "2022-03-17"
+year = 2022
+title = "Pressure-driven symmetry transitions in dense H2O ice"
+authors = [
+  "Zachary M. Grande",
+  "C. Huy Pham",
+  "Dean Smith",
+  "John H. Boisvert",
+  "Chenliang Huang",
+  "Jesse S. Smith",
+  "Nir Goldman",
+  "Jonathan L. Belof",
+  "Oliver Tschauner",
+  "Jason H. Steffen",
+  "Ashkan Salamat",
+]
+journal = "Physical Review B"
+volume = 105
+issue = 10
+article_number = "104109"
+doi = "https://doi.org/10.1103/PhysRevB.105.104109"
+ads = "https://ui.adsabs.harvard.edu/abs/2022PhRvB.105j4109G/abstract"
+bibcode = "2022PhRvB.105j4109G"
+publisher_url = "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.104109"
+zenodo = "https://doi.org/10.5281/zenodo.6339621"
+
+[external_data]
+zenodo_record = "6339621"
+zenodo_description = "Raw XRD patterns for ice and Au, key correlating patterns, and calibration files."
+supplementary_file = "SI_Grande_2022.pdf"
+supplementary_table = "Table 4, pp. 19-24"
+supplementary_table_description = "All pressure-volume data used for the EOS fitting."
+
+[logistics]
+ingested_when = "2026-08-21"
+last_updated = "2026-08-21"
+
+[other]
+notes = "Draft PEARL curation. The Supplementary Information provides the full experimental P-V table and the preferred three-phase Vinet MCMC parameter set. No row-resolved temperatures are tabulated; measurements are described as room-temperature compression data after melt-quench/annealing."

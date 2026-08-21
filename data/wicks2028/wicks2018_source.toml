@@ -1,0 +1,41 @@
+unique_id = "wicks2018"
+citation = "Wicks et al. (2018)"
+date = "2018-04-25"
+year = 2018
+title = "Crystal structure and equation of state of Fe-Si alloys at super-Earth core conditions"
+authors = [
+  "June K. Wicks",
+  "Raymond F. Smith",
+  "Dayne E. Fratanduono",
+  "Federica Coppari",
+  "Richard G. Kraus",
+  "Matthew G. Newman",
+  "J. Ryan Rygg",
+  "Jon H. Eggert",
+  "Thomas S. Duffy",
+]
+journal = "Science Advances"
+volume = 4
+issue = 4
+article_number = "eaao5864"
+doi = "https://doi.org/10.1126/sciadv.aao5864"
+publisher_url = "https://www.science.org/doi/10.1126/sciadv.aao5864"
+supplement_url = "https://www.science.org/doi/10.1126/sciadv.aao5864#supplementary-materials"
+
+bibtex = """@article{Wicks2018,
+  author = {Wicks, June K. and Smith, Raymond F. and Fratanduono, Dayne E. and Coppari, Federica and Kraus, Richard G. and Newman, Matthew G. and Rygg, J. Ryan and Eggert, Jon H. and Duffy, Thomas S.},
+  title = {Crystal structure and equation of state of Fe-Si alloys at super-Earth core conditions},
+  journal = {Science Advances},
+  year = {2018},
+  volume = {4},
+  number = {4},
+  pages = {eaao5864},
+  doi = {10.1126/sciadv.aao5864}
+}"""
+
+[logistics]
+ingested_when = "2026-08-21"
+last_updated = "2026-08-21"
+
+[other]
+notes = "Draft PEARL curation from the supplied final article and Supplementary Materials PDF. Two nominal alloy compositions are treated as distinct materials: Fe-7 wt% Si and Fe-15 wt% Si."

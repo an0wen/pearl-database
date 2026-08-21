@@ -1,0 +1,80 @@
+unique_id = "li2023"
+entry_id = "li2023_stishovite_thermo"
+
+[science]
+material = "silicon dioxide"
+formula = "SiO2"
+composition_details = "stoichiometric SiO2"
+mixture = false
+physical_state = "solid"
+phase = "stishovite"
+crystal = "rutile-type"
+space_group = "P42/mnm"
+type = "simulation"
+method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
+setup = "VASP 5.4.4 PAW/PBE-GGA calculations with Phonopy quasi-harmonic lattice dynamics; generalized rescaling was applied before regression. LD supercell 3x3x4."
+
+[data]
+file = "li2023_stishovite_thermo.dat"
+raw_file = "li2023_sio2_thermo_raw.xlsx"
+conversion_script = "li2023_sio2_thermo.py"
+source_location = "Supplementary workbook, sheet 'TVPF', rows 8-27"
+delimiter = "tab"
+row_count = 20
+missing_value = "NaN"
+row_order = "preserved from source"
+data_status = "reported T, V, P, F; converted to SI; rho derived"
+column_order = ["rho[kg/m^3]", "P[Pa]", "T[K]", "V[m^3/mol]", "f[J/mol]"]
+
+[validity]
+range_type = "numerical extrema of the phase-specific supplementary TVPF rows; also used as the conservative EOS calibration-data range"
+min_p = 6.19872170882023e+9
+max_p = 1.21270007132736e+11
+min_t = 3e+2
+max_t = 4e+3
+min_v = 1.10855e-5
+max_v = 1.37561e-5
+min_rho = 4.36783e+3
+max_rho = 5.42008e+3
+
+[[columns]]
+name = "rho"
+header = "rho[kg/m^3]"
+unit = "kg/m^3"
+status = "derived"
+description = "Density calculated as rho = M_SiO2 / V."
+provenance = "M_SiO2 = 0.0600843 kg/mol adopted from NIST Chemistry WebBook; V is the converted supplementary molar volume."
+
+[[columns]]
+name = "P"
+header = "P[Pa]"
+unit = "Pa"
+status = "converted"
+original_unit = "GPa"
+conversion = "P_SI = P_source * 1e9"
+
+[[columns]]
+name = "T"
+header = "T[K]"
+unit = "K"
+status = "reported"
+
+[[columns]]
+name = "V"
+header = "V[m^3/mol]"
+unit = "m^3/mol"
+status = "converted"
+original_unit = "cm^3/mol"
+conversion = "V_SI = V_source * 1e-6"
+
+[[columns]]
+name = "f"
+header = "f[J/mol]"
+unit = "J/mol"
+status = "converted"
+original_name = "F"
+original_unit = "kJ/mol"
+conversion = "f_SI = F_source * 1e3"
+description = "Total Helmholtz free energy reported in the TVPF sheet."
+[other]
+notes = "Density is not reported by Li et al. and is explicitly derived. No source cells are blank in the curated rows. Phase is recorded in the filename and metadata and is intentionally omitted from the standardized .dat table. The supplementary pressure and free-energy values are computed values and are retained to 15 significant digits to suppress spreadsheet binary-storage artifacts without adding precision."

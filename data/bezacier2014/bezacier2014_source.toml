@@ -1,0 +1,37 @@
+unique_id = "bezacier2014"
+citation = "Bezacier et al. (2014)"
+date = "2014-09-10"
+year = 2014
+title = "Equations of state of ice VI and ice VII at high pressure and high temperature"
+authors = [
+  "Lucile Bezacier",
+  "Baptiste Journaux",
+  "Jean-Philippe Perrillat",
+  "Hervé Cardon",
+  "Michael Hanfland",
+  "Isabelle Daniel",
+]
+journal = "The Journal of Chemical Physics"
+volume = 141
+issue = 10
+article_number = "104505"
+doi = "https://doi.org/10.1063/1.4894421"
+publisher_url = "https://pubs.aip.org/aip/jcp/article/141/10/104505/74112/Equations-of-state-of-ice-VI-and-ice-VII-at-high"
+pmid = "25217935"
+bibtex = """@article{Bezacier2014,
+  author = {Bezacier, Lucile and Journaux, Baptiste and Perrillat, Jean-Philippe and Cardon, Hervé and Hanfland, Michael and Daniel, Isabelle},
+  title = {Equations of state of ice VI and ice VII at high pressure and high temperature},
+  journal = {The Journal of Chemical Physics},
+  year = {2014},
+  volume = {141},
+  number = {10},
+  pages = {104505},
+  doi = {10.1063/1.4894421}
+}"""
+
+[logistics]
+ingested_when = "2026-08-20"
+last_updated = "2026-08-20"
+
+[other]
+notes = "Draft PEARL curation from the supplied article PDF and AIP publisher record. No supplementary-material link was found on the publisher article page during this curation pass. Curator identity was not supplied and is therefore omitted."

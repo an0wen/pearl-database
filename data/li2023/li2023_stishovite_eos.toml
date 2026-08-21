@@ -1,0 +1,113 @@
+unique_id = "li2023"
+entry_id = "li2023_stishovite_eos"
+
+[science]
+material = "silicon dioxide"
+formula = "SiO2"
+composition_details = "stoichiometric SiO2"
+mixture = false
+physical_state = "solid"
+phase = "stishovite"
+crystal = "rutile-type"
+space_group = "P42/mnm"
+method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
+
+[description]
+type = "analytical"
+cold_type = "bm3"
+thermal_exist = true
+thermal_type = "debye"
+reference_temperature = 300.0
+n_atoms_per_formula = 3
+equation_source = "Equations 13-21 and Table 1, pp. 5-6"
+equations = [
+  "P(V,T) = P_T0(V) + P_th(V,T)",
+  "P_T0(V) = BM3(V; V_0, K_0, K_0_prime)",
+  "P_th(V,T) = 3*n*R*T*gamma(V)*D(theta(V)/T)/V",
+  "gamma(V) = gamma_0*(V/V_0)^q",
+  "theta(V) = theta_0*exp((gamma_0-gamma(V))/q)",
+  "F(V,T) = F_T0(V) + F_th(V,T)",
+]
+
+[setup]
+summary = "VASP 5.4.4 PAW/PBE-GGA calculations with Phonopy quasi-harmonic lattice dynamics; generalized rescaling was applied before final P-V-T-F regression."
+phase_specific = "LD supercell 3x3x4."
+
+[source_data]
+raw_file = "li2023_sio2_thermo_raw.xlsx"
+sheet = "TVPF"
+row_range = "8-27"
+data_status = "reported supplementary regression data"
+
+[validity]
+range_type = "calibration-data range calculated from the phase-specific rows of the supplementary TVPF sheet; not an author-recommended extrapolation range"
+min_p = 6.19872170882023e+9
+max_p = 1.21270007132736e+11
+min_t = 3e+2
+max_t = 4e+3
+min_v = 1.10855e-5
+max_v = 1.37561e-5
+min_rho = 4.36783e+3
+max_rho = 5.42008e+3
+density_status = "derived from V using adopted molar mass 0.0600843 kg/mol"
+
+[parameters]
+V_0 = 1.401e-5
+dV_0 = 1e-8
+K_0 = 3.12e+11
+dK_0 = 3e+9
+K_0_prime = 4.08e+0
+dK_0_prime = 6e-2
+gamma_0 = 1.31e+0
+dgamma_0 = 2e-2
+q = 1.16e+0
+dq = 9e-2
+theta_0 = 1.051e+3
+dtheta_0 = 2e+0
+E_0 = -8.186e+5
+dE_0 = 2e+2
+
+[parameter_units]
+V_0 = "m^3/mol"
+dV_0 = "m^3/mol"
+K_0 = "Pa"
+dK_0 = "Pa"
+K_0_prime = "1"
+dK_0_prime = "1"
+gamma_0 = "1"
+dgamma_0 = "1"
+q = "1"
+dq = "1"
+theta_0 = "K"
+dtheta_0 = "K"
+E_0 = "J/mol"
+dE_0 = "J/mol"
+
+[parameter_status]
+V_0 = "reported fitted; converted to SI"
+dV_0 = "reported uncertainty; converted to SI"
+K_0 = "reported fitted; converted to SI"
+dK_0 = "reported uncertainty; converted to SI"
+K_0_prime = "reported fitted"
+dK_0_prime = "reported uncertainty"
+gamma_0 = "reported fitted"
+dgamma_0 = "reported uncertainty"
+q = "reported fitted"
+dq = "reported uncertainty"
+theta_0 = "reported fitted"
+dtheta_0 = "reported uncertainty"
+E_0 = "reported fitted; converted to SI"
+dE_0 = "reported uncertainty; converted to SI"
+
+[parameter_source]
+location = "Table 1, p. 6"
+V_0_original = "14.01(1) cm^3/mol"
+K_0_original = "312(3) GPa"
+K_0_prime_original = "4.08(6)"
+gamma_0_original = "1.31(2)"
+q_original = "1.16(9)"
+theta_0_original = "1051(2) K"
+E_0_original = "-818.6(2) kJ/mol"
+
+[other]
+notes = "The reference-energy values used in the rescaling equations on p. 4 are not the same quantity as the final fitted E_0 in Table 1 and were not substituted here."

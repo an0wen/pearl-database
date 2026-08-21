@@ -1,0 +1,49 @@
+unique_id = "li2023"
+entry_id = "li2023_sio2_phase_boundaries_eos"
+
+[science]
+material = "silicon dioxide"
+formula = "SiO2"
+composition_details = "stoichiometric SiO2"
+mixture = false
+physical_state = "solid"
+phases = ["stishovite", "CaCl2-type SiO2", "seifertite"]
+method = "Gibbs free-energy intersections computed from the fitted thermal EOS"
+
+[description]
+type = "phase_boundary_set"
+kind = "reported phase-boundary summaries"
+source_location = "Section 3.3 and Figure 4, pp. 8-9; uncertainty discussion in Section 4.1, p. 10"
+curve_data_available = false
+notes = "The publication reports slopes and one 300 K transition pressure, but does not tabulate the phase-boundary curves. No values were digitized from Figure 4."
+
+[[boundaries]]
+label = "stishovite_to_cacl2sio2"
+low_pressure_phase = "stishovite"
+high_pressure_phase = "CaCl2-type SiO2"
+transition_order = "second-order"
+clapeyron_slope = 6.99e6
+clapeyron_slope_unit = "Pa/K"
+clapeyron_slope_status = "reported estimate"
+transition_pressure_at_300K = 54.4e9
+transition_pressure_unit = "Pa"
+transition_pressure_status = "reported"
+
+[[boundaries]]
+label = "cacl2sio2_to_seifertite"
+low_pressure_phase = "CaCl2-type SiO2"
+high_pressure_phase = "seifertite"
+clapeyron_slope = 6.88e6
+clapeyron_slope_unit = "Pa/K"
+clapeyron_slope_status = "reported approximate estimate"
+transition_pressure_status = "missing; not explicitly reported in text and not digitized"
+
+[uncertainty]
+estimated_boundary_location_uncertainty = 8e9
+unit = "Pa"
+status = "reported approximate estimate"
+interpretation = "Authors' Section 4.1 approximate phase-boundary location uncertainty; not assigned separately to either boundary."
+
+[validity]
+range_type = "phase-boundary curves shown for lower-mantle conditions in Figure 4; exact numerical curve domain is not tabulated"
+recommended_extrapolation_range = "missing"

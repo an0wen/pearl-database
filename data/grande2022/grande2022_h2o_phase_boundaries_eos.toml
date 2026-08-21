@@ -1,0 +1,44 @@
+unique_id = "grande2022"
+entry_id = "grande2022_h2o_phase_boundaries"
+
+[science]
+material = "water"
+formula = "H2O"
+physical_state = "solid"
+phases = ["ice VII", "ice VIIt", "ice X"]
+method = "three-phase Vinet MCMC fit to room-temperature compression data"
+
+[description]
+type = "phase_boundary_set"
+kind = "reported fitted transition pressures"
+source_location = "Final PRB article, Fig. 4 and Results/Discussion, pp. 104109-4 to 104109-6"
+curve_data_available = false
+notes = "Only the room-temperature transition pressures directly reported in the final article are retained here. The high-temperature projected boundaries shown in Fig. 5 are not tabulated and are not digitized."
+
+[[boundaries]]
+label = "ice_vii_to_ice_viit"
+low_pressure_phase = "ice VII"
+high_pressure_phase = "ice VIIt"
+transition_pressure_at_300K = 5.1e9
+dtransition_pressure_at_300K = 0.5e9
+transition_pressure_unit = "Pa"
+transition_pressure_status = "fitted and reported"
+temperature = 300.0
+temperature_unit = "K"
+temperature_status = "nominal room-temperature condition"
+
+[[boundaries]]
+label = "ice_viit_to_ice_x"
+low_pressure_phase = "ice VIIt"
+high_pressure_phase = "ice X"
+transition_pressure_at_300K = 30.9e9
+dtransition_pressure_at_300K = 3.0e9
+transition_pressure_unit = "Pa"
+transition_pressure_status = "fitted and reported"
+temperature = 300.0
+temperature_unit = "K"
+temperature_status = "nominal room-temperature condition"
+
+[validity]
+range_type = "two fitted room-temperature phase-transition pressures; no numerical phase-boundary curves are tabulated"
+recommended_extrapolation_range = "missing"

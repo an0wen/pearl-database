@@ -1,0 +1,49 @@
+unique_id = "li2023"
+citation = "Li et al. (2023)"
+date = 2023-10-20
+year = 2023
+title = "Equations of State and Phase Boundaries of SiO2 Polymorphs Under Lower Mantle Conditions"
+authors = [
+  "Guoge Li",
+  "Zhiming Zhang",
+  "Xiaoguang Niu",
+  "Jin Liu",
+  "Juan Li",
+  "Wei Wang",
+  "Zhigang Zhang",
+]
+journal = "Journal of Geophysical Research: Solid Earth"
+volume = 128
+issue = 10
+article_number = "e2023JB026774"
+doi = "https://doi.org/10.1029/2023JB026774"
+dataset_doi = "https://doi.org/10.5281/zenodo.8188349"
+dataset_version = "2"
+received = 2023-03-21
+accepted = 2023-10-08
+
+bibtex = """
+@article{Li2023SiO2,
+  author = {Li, Guoge and Zhang, Zhiming and Niu, Xiaoguang and Liu, Jin and Li, Juan and Wang, Wei and Zhang, Zhigang},
+  title = {Equations of State and Phase Boundaries of SiO2 Polymorphs Under Lower Mantle Conditions},
+  journal = {Journal of Geophysical Research: Solid Earth},
+  year = {2023},
+  volume = {128},
+  number = {10},
+  pages = {e2023JB026774},
+  doi = {10.1029/2023JB026774}
+}
+"""
+
+[logistics]
+ingested_by = "David R. Rice"
+reviewed_by = "David R. Rice"
+ingested_when = 2026-07-21
+last_updated = 2026-08-20
+
+[files]
+raw_supplement = "li2023_sio2_thermo_raw.xlsx"
+raw_supplement_sha256 = "6e13b636da743714a6af01a573b9700ad520ad89b892a3e4fbc196527e22fbc2"
+
+[other]
+notes = "Draft curation requiring human scientific review. Publication date 2023-10-20 was supplied by David R. Rice during review. The paper cites the supplementary dataset as Version 2 on Zenodo."

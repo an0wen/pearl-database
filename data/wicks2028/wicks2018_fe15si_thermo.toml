@@ -1,0 +1,77 @@
+unique_id = "wicks2018"
+entry_id = "wicks2018_fe15si_thermo"
+
+[science]
+material = "iron-silicon alloy"
+formula = "Fe-Si"
+composition_details = "85 wt% Fe, 15 wt% Si"
+mixture = true
+physical_state = "solid"
+phase = "bcc"
+crystal = "body-centered cubic; B2 ordering cannot be distinguished by the observed diffraction line"
+type = "experiment"
+method = "laser-driven dynamic ramp compression with in situ x-ray diffraction and VISAR pressure determination"
+
+[data]
+file = "wicks2018_fe15si_thermo.dat"
+raw_file = "wicks2018_tableS1_thermo_raw.dat"
+conversion_script = "wicks2018_tableS1_thermo.py"
+source_location = "Supplementary Table S1, p. 3"
+delimiter = "tab"
+row_count = 10
+row_order = "preserved from source within this composition"
+data_status = "reported pressure, pressure uncertainty, density, and density uncertainty; converted to SI"
+column_order = ["rho[kg/m^3]", "drho[kg/m^3]", "P[Pa]", "dP_minus[Pa]", "dP_plus[Pa]"]
+temperature_column_included = false
+temperature_condition = "not directly measured; ramp-compression states are subsolidus and approximately near-isentropic, but sample temperature is not known row by row"
+
+[validity]
+min_p = 97000000000
+max_p = 1.26e+12
+min_rho = 9374
+max_rho = 17586
+range_type = "numerical extrema of this composition in Supplementary Table S1; interpreted as the source-data range of the ramp-compression P-rho measurements"
+
+[[columns]]
+name = "rho"
+header = "rho[kg/m^3]"
+unit = "kg/m^3"
+status = "reported by authors, converted"
+original_unit = "g/cm^3"
+conversion = "rho_SI = rho_source * 1000"
+description = "Density calculated by the authors from the diffraction interpretation and reported in Table S1."
+
+[[columns]]
+name = "drho"
+header = "drho[kg/m^3]"
+unit = "kg/m^3"
+status = "reported uncertainty, converted"
+original_unit = "g/cm^3"
+conversion = "drho_SI = drho_source * 1000"
+
+[[columns]]
+name = "P"
+header = "P[Pa]"
+unit = "Pa"
+status = "reported, converted"
+original_unit = "GPa"
+conversion = "P_SI = P_source * 1e9"
+
+[[columns]]
+name = "dP_minus"
+header = "dP_minus[Pa]"
+unit = "Pa"
+status = "reported lower uncertainty, converted"
+original_unit = "GPa"
+description = "For source rows with symmetric pressure uncertainty, dP_minus equals dP_plus."
+
+[[columns]]
+name = "dP_plus"
+header = "dP_plus[Pa]"
+unit = "Pa"
+status = "reported upper uncertainty, converted"
+original_unit = "GPa"
+description = "For source rows with symmetric pressure uncertainty, dP_plus equals dP_minus."
+
+[other]
+notes = "The authors assign the observed line to bcc (110). The ordered B2 structure is diffraction-compatible, but bcc versus B2 chemical ordering is unresolved. A single symmetric dP column is intentionally not fabricated because several Table S1 pressure uncertainties are asymmetric. Temperature columns are omitted because temperature was not directly measured."

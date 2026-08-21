@@ -1,0 +1,62 @@
+unique_id = "wicks2018"
+entry_id = "wicks2018_fe7si_vinet"
+
+[science]
+material = "iron-silicon alloy"
+formula = "Fe-Si"
+composition_details = "93 wt% Fe, 7 wt% Si"
+mixture = true
+physical_state = "solid"
+phase = "hcp"
+crystal = "hexagonal close-packed"
+method = "laser-driven dynamic ramp compression with in situ x-ray diffraction"
+
+[description]
+type = "fit"
+cold_type = "Vinet"
+thermal_exist = false
+reference_path = "dynamic ramp-compression P-rho path; approximately near-isentropic but temperature not directly measured"
+source_location = "Main article, section 'Fe-Si equation of state to terapascal pressures', p. 3; Fig. 3 and Fig. 5"
+notes = "Primary author-reported Vinet fit retained: V_0 fixed to the ambient atomic volume while K_0 and K_0_prime are fitted freely. This is not a calibrated thermal EOS or a strictly measured 300 K isotherm. Fe-7Si is observed in the hcp structure over the measured ramp-compression range."
+
+[equations]
+vinet = "P = 3*K_0*(1-x)/x^2 * exp((3/2)*(K_0_prime-1)*(1-x)), where x=(V/V_0)^(1/3)"
+
+[validity]
+min_p = 140000000000
+max_p = 1.314e+12
+min_rho = 10288
+max_rho = 17974
+range_type = "calibration/source-data range from the composition-specific Supplementary Table S1 P-rho points"
+temperature_range = "not numerically specified because temperature was not directly measured"
+extrapolation_range = "not explicitly recommended by the authors"
+
+[parameters]
+V_0 = 7.0206e-06
+K_0 = 136.2e9
+dK_0 = 20e9
+K_0_prime = 5.97
+dK_0_prime = 0.47
+
+[parameter_units]
+V_0 = "m^3/mol"
+K_0 = "Pa"
+dK_0 = "Pa"
+K_0_prime = "1"
+dK_0_prime = "1"
+
+[parameter_status]
+V_0 = "fixed by authors at the ambient atomic volume; converted from A^3/atom to m^3/mol of atoms using exact N_A"
+K_0 = "fitted and reported; converted from GPa to Pa"
+dK_0 = "reported fit uncertainty; converted from GPa to Pa"
+K_0_prime = "fitted and reported"
+dK_0_prime = "reported fit uncertainty"
+
+[parameter_source]
+V_0_original = "11.658 A^3/atom"
+V_0_basis = "per mole of atoms in the alloy; not per mole of an integer chemical formula"
+K_0_original = "136.2 +/- 20.0 GPa"
+K_0_prime_original = "5.97 +/- 0.47"
+
+[other]
+notes = "When K_0_prime is fixed to 5, the authors report K_0 = 183.4 +/- 7.4 GPa; this constrained alternative is not retained as a separate PEARL EOS."
