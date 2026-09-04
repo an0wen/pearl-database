@@ -3,7 +3,7 @@ unique_id = "attia2026"
 [science]
 material = "water"
 formula = "H2O"
-phase = ["ice-Ih", "ice-II", "ice-III", "ice-V", "ice-VI", "ice-VII", "ice-X", "liquid", "vapor", "supercritical"]
+phase = ["ice-Ih", "ice-II", "ice-III", "ice-V", "ice-VI", "ice-VII", "ice-X", "liquid", "gas", "supercritical"]
 crystal = "ice polymorphs Ih-X"
 method = ["tabulated"]
 

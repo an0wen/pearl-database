@@ -1,10 +1,11 @@
 unique_id = "wolf2015"
 
 [science]
-material = "bridgmanite"
+material = "magnesium metasilicate"
 formula = "MgSiO3"
-phase = "solid"
+phase = "bridgmanite"
 crystal = "perovskite"
+physical_state = "solid"
 method = "XRD"
 
 [description]

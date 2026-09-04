@@ -1,9 +1,10 @@
 unique_id = "luodeng2025"
 
 [science]
-material = "magnesium silicate"
+material = "magnesium metasilicate"
 formula = "MgSiO3"
 phase = "liquid"
+physical_state = "liquid"
 crystal = "n/a"
 method = "AIMD"
 

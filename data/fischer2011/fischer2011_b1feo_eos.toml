@@ -1,10 +1,11 @@
 unique_id = "fischer2011"
 
 [science]
-material = "wustite"
+material = "iron oxide"
 formula = "FeO"
-phase = "solid"
-cristal = "B1"
+phase = "wustite"
+crystal = "B1"
+physical_state = "solid"
 method = "LH-DAC XRD"
 
 [description]

@@ -1,13 +1,10 @@
 unique_id = "grande2022"
-entry_id = "grande2022_iceviit_pv"
 
 [science]
 material = "water"
 formula = "H2O"
-composition_details = "pure H2O"
-mixture = false
-phase = "solid"
-named_phase = "ice VIIt"
+phase = "ice-VII*"
+physical_state = "solid"
 crystal = "tetragonal"
 space_group = "P-42m"
 method = "diamond-anvil-cell synchrotron powder XRD; Le Bail volume extraction; Au pressure marker"

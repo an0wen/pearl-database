@@ -1,10 +1,12 @@
 unique_id = "hollandpowell2011"
 
 [science]
-material = "forsterite"
+material = "magnesium orthosilicate"
 formula = "Mg2SiO4"
-phase = "liquid"
-crystal = ""
+phase = "forsterite"
+physical_state = "liquid"
+crystal = "orthorhombic"
+mineral = "olivine"
 
 [description]
 type = "fit"

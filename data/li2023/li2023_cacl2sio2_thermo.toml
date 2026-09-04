@@ -1,17 +1,14 @@
 unique_id = "li2023"
-entry_id = "li2023_cacl2sio2_thermo"
 
 [science]
 material = "silicon dioxide"
 formula = "SiO2"
-composition_details = "stoichiometric SiO2"
-mixture = false
 physical_state = "solid"
-phase = "CaCl2-type SiO2"
-crystal = "CaCl2-type"
+phase = "CaCl2-type"
+crystal = "CaCl2"
 space_group = "Pnnm"
 type = "simulation"
-method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
+method = ["DFT", "quasi-harmonic approximation"]
 setup = "VASP 5.4.4 PAW/PBE-GGA calculations with Phonopy quasi-harmonic lattice dynamics; generalized rescaling was applied before regression. LD supercell 3x3x4."
 
 [data]

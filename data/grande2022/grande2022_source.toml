@@ -38,4 +38,4 @@ ingested_when = "2026-08-21"
 last_updated = "2026-08-21"
 
 [other]
-notes = "Draft PEARL curation. The Supplementary Information provides the full experimental P-V table and the preferred three-phase Vinet MCMC parameter set. No row-resolved temperatures are tabulated; measurements are described as room-temperature compression data after melt-quench/annealing."
+notes = "PEARL curation, checked by David R. Rice. The Supplementary Information provides the full experimental P-V table and the preferred three-phase Vinet MCMC parameter set. No row-resolved temperatures are tabulated; measurements are described as room-temperature compression data after melt-quench/annealing."

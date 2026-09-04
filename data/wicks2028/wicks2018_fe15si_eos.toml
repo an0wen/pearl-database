@@ -1,14 +1,13 @@
 unique_id = "wicks2018"
-entry_id = "wicks2018_fe15si_vinet"
 
 [science]
 material = "iron-silicon alloy"
-formula = "Fe-Si"
+formula = "Fe-Si, 15 wt% Si"
 composition_details = "85 wt% Fe, 15 wt% Si"
 mixture = true
 physical_state = "solid"
 phase = "bcc"
-crystal = "body-centered cubic; B2-compatible ordering unresolved"
+crystal = "bcc"
 method = "laser-driven dynamic ramp compression with in situ x-ray diffraction"
 
 [description]

@@ -1,9 +1,11 @@
 unique_id = "xie2025"
 
 [science]
-material = "Iron Oxide"
+material = "Iron-Oxygen alloy"
 formula = "FexOy"
+composition_details = "Fe-X wt% O, X = 0, 2.8, 6.1, and 9.9; equivalent to 0, 9.26, 18.52, and 27.78 at% O"
 phase = "liquid"
+physical_state = "liquid"
 crystal = "na"
 method = "AIMD"
 

@@ -34,4 +34,4 @@ ingested_when = "2026-08-20"
 last_updated = "2026-08-20"
 
 [other]
-notes = "Draft PEARL curation from the supplied article PDF and AIP publisher record. No supplementary-material link was found on the publisher article page during this curation pass. Curator identity was not supplied and is therefore omitted."
+notes = "PEARL curation from the supplied article PDF and AIP publisher record. No supplementary-material link was found on the publisher article page during this curation pass. Checked and confirmed by David R. Rice."

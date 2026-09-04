@@ -1,13 +1,10 @@
 unique_id = "bezacier2014"
-entry_id = "bezacier2014_icevii_thermo"
 
 [science]
 material = "water"
 formula = "H2O"
-composition_details = "pure H2O"
-mixture = false
-phase = "solid"
-named_phase = "ice VII"
+phase = "ice-VII"
+physical_state = "solid"
 crystal = "cubic"
 space_group = "Pn-3m"
 type = "experiment"

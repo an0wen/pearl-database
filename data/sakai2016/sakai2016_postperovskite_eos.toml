@@ -1,10 +1,11 @@
 unique_id = "sakai2016"
 
 [science]
-material = "post-perovskite"
+material = "magnesium metasilicate"
 formula = "MgSiO3"
-phase = "solid"
+phase = "post-perovskite"
 crystal = "post-perovskite"
+physical_state = "solid"
 method = "DFT"
 
 [description]

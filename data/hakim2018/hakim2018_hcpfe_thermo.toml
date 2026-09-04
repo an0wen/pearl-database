@@ -3,5 +3,7 @@ unique_id = "hakim2018"
 [science]
 material = "iron"
 formula = "Fe"
-phase = "solid"
+phase = "gamma"
+crystal = "hcp" 
+physical_state = "solid"
 method = "DFT"

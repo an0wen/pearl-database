@@ -1,10 +1,12 @@
 unique_id = "hollandpowell2011"
 
 [science]
-material = "enstatite"
+material = "magnesium metasilicate"
 formula = "Mg2Si2O6"
-phase = "solid"
-crystal = ""
+phase = "enstatite"
+physical_state = "solid"
+crystal = "Orthorhombic"
+mineral = "orthopyroxene"
 
 [description]
 type = "fit"

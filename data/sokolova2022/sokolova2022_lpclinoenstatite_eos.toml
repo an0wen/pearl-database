@@ -3,9 +3,11 @@ unique_id = "sokolova2022"
 [science]
 material = "clinoenstatite"
 formula = "MgSiO3"
-phase = "solid"
-crystal = "low-pressure clinoenstatite (P2_1/c)"
+phase = "clinoenstatite"
+crystal = "P2_1/c"
+physical_state = "solid"
 method = "Experimental Compilation"
+mineral = "clinopyroxene"
 
 [description]
 type = "fit"

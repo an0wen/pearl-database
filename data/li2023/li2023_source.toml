@@ -46,4 +46,4 @@ raw_supplement = "li2023_sio2_thermo_raw.xlsx"
 raw_supplement_sha256 = "6e13b636da743714a6af01a573b9700ad520ad89b892a3e4fbc196527e22fbc2"
 
 [other]
-notes = "Draft curation requiring human scientific review. Publication date 2023-10-20 was supplied by David R. Rice during review. The paper cites the supplementary dataset as Version 2 on Zenodo."
+notes = "Pearl curation. Publication date 2023-10-20 was supplied by David R. Rice during review. The paper cites the supplementary dataset as Version 2 on Zenodo."

@@ -9,6 +9,7 @@ material = "iron"  # Material name, e.g. "iron"
 formula = "Fe"  # Chemical formula, e.g. "Fe"
 phase = "liquid"  # Phase, e.g. "solid"
 crystal = "n/a"  # Crystal structure, e.g. "hcp"
+physical_state = "liquid"
 method = "Experimental Compilation"  # Experimental or computational method, e.g. "DAC"
 
 [description]

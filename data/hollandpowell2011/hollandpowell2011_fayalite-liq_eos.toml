@@ -1,10 +1,12 @@
 unique_id = "hollandpowell2011"
 
 [science]
-material = "fayalite"
+material = "iron orthosilicate"
 formula = "Fe2SiO4"
-phase = "liquid"
-crystal = ""
+phase = "fayalite"
+crystal = "orthorhombic"
+physical_state = "liquid"
+mineral = "olivine"
 
 [description]
 type = "fit"

@@ -4,6 +4,7 @@ unique_id = "luo2024"
 material = "iron"
 formula = "Fe"
 phase = "liquid"
+physical_state = "liquid"
 crystal = "n/a"
 method = "AIMD"
 

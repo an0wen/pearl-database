@@ -1,10 +1,12 @@
 unique_id = "hollandpowell2011"
 
 [science]
-material = "ferrosilite"
+material = "iron metasilicate"
 formula = "Fe2Si2O6"
-phase = "solid"
-crystal = ""
+phase = "ferrosilite"
+physical_state = "solid"
+crystal = "orthorhombic"
+mineral = "orthopyroxene"
 
 [description]
 type = "fit"

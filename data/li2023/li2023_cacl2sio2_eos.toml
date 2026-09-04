@@ -1,16 +1,13 @@
 unique_id = "li2023"
-entry_id = "li2023_cacl2sio2_eos"
 
 [science]
 material = "silicon dioxide"
 formula = "SiO2"
-composition_details = "stoichiometric SiO2"
-mixture = false
 physical_state = "solid"
-phase = "CaCl2-type SiO2"
-crystal = "CaCl2-type"
+phase = "CaCl2-type"
+crystal = "CaCl2"
 space_group = "Pnnm"
-method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
+method = ["DFT", "quasi-harmonic approximation"]
 
 [description]
 type = "analytical"

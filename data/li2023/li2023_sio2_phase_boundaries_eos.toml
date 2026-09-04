@@ -1,5 +1,4 @@
 unique_id = "li2023"
-entry_id = "li2023_sio2_phase_boundaries_eos"
 
 [science]
 material = "silicon dioxide"

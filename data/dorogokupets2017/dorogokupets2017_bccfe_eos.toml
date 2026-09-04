@@ -7,8 +7,9 @@ unique_id = "dorogokupets2017"  # Unique identifier as defined in the *_source.t
 [science]
 material = "iron"  # Material name, e.g. "iron"
 formula = "Fe"  # Chemical formula, e.g. "Fe"
-phase = "solid"  # Phase, e.g. "solid"
+phase = "alpha"  # Phase
 crystal = "bcc"  # Crystal structure, e.g. "hcp"
+physical_state = "solid"
 method = "Experimental Compilation"  # Experimental or computational method, e.g. "DAC"
 
 [description]

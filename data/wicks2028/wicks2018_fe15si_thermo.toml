@@ -1,14 +1,13 @@
 unique_id = "wicks2018"
-entry_id = "wicks2018_fe15si_thermo"
 
 [science]
 material = "iron-silicon alloy"
-formula = "Fe-Si"
+formula = "Fe-Si, 15 wt% Si"
 composition_details = "85 wt% Fe, 15 wt% Si"
 mixture = true
 physical_state = "solid"
 phase = "bcc"
-crystal = "body-centered cubic; B2 ordering cannot be distinguished by the observed diffraction line"
+crystal = "bcc"
 type = "experiment"
 method = "laser-driven dynamic ramp compression with in situ x-ray diffraction and VISAR pressure determination"
 

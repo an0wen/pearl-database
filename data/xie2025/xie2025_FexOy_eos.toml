@@ -1,9 +1,11 @@
 unique_id = "xie2025"
 
 [science]
-material = "Iron Oxide" # Combined EOS for Fe and O. Data includes pure Fe end member but only goes up to 27.77% by moles (9.9% by weight) O.
+material = "Iron-Oxygen alloy" # Combined EOS for Fe and O. Data includes pure Fe end member but only goes up to 27.77% by moles (9.9% by weight) O.
 formula = "FexOy"  # x,y variable, given in raw data tables
+composition_details = "Fe-X wt% O, X = 0, 2.8, 6.1, and 9.9; equivalent to 0, 9.26, 18.52, and 27.78 at% O"
 phase = "liquid"
+physical_state = "liquid"
 crystal = "na"
 method = "AIMD"
 

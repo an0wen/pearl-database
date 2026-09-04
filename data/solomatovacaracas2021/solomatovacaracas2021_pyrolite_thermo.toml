@@ -4,6 +4,7 @@ unique_id = "solomatovacaracas2021"
 material = "pyrolite"
 formula = "NaCa2Al3Fe4Mg30Si24O65"
 phase = "liquid"
+physical_state = "liquid"
 method = "MD"
 
 [data]

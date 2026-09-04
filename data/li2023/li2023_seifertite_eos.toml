@@ -1,14 +1,11 @@
 unique_id = "li2023"
-entry_id = "li2023_seifertite_eos"
 
 [science]
 material = "silicon dioxide"
 formula = "SiO2"
-composition_details = "stoichiometric SiO2"
-mixture = false
 physical_state = "solid"
 phase = "seifertite"
-crystal = "alpha-PbO2-type"
+crystal = "PbO2-type"
 space_group = "Pbcn"
 method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
 

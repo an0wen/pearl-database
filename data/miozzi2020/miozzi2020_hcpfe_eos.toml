@@ -3,8 +3,9 @@ unique_id = "miozzi2020"
 [science]
 material = "iron"
 formula = "Fe"
-phase = "solid"
-cristal = "hcp"
+phase = "epsilon"
+crystal = "hcp"
+physical_state = "solid"
 method = "DAC"
 
 [description]

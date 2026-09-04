@@ -1,16 +1,13 @@
 unique_id = "li2023"
-entry_id = "li2023_stishovite_eos"
 
 [science]
 material = "silicon dioxide"
 formula = "SiO2"
-composition_details = "stoichiometric SiO2"
-mixture = false
 physical_state = "solid"
 phase = "stishovite"
 crystal = "rutile-type"
 space_group = "P42/mnm"
-method = ["DFT", "quasi-harmonic approximation", "generalized rescaling"]
+method = ["DFT", "quasi-harmonic approximation"]
 
 [description]
 type = "analytical"
