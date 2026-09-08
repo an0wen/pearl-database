@@ -1,0 +1,67 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "simple-hexagonal"
+crystal = "simple hexagonal"
+physical_state = "solid"
+method = "PBE-GGA DFT cold curves, phonon calculations, and DFT-MD validation"
+
+[description]
+type = "free-energy fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "single-Debye quasiharmonic + electronic T^2 correction"
+reference_temperature = 0.0
+
+[parameters]
+V_0 = 5.7849286354636e-06
+B_0 = 22120000000
+B_0_prime = 6.495
+phi_0 = -627154.658801515
+V_p = 8.129890026e-07
+theta_A_0 = 4183.8
+A_A = 722998.709847493
+B_A = 0.4034
+theta_B_0 = 4183.8
+A_B = 722998.709847493
+B_B = 0.4034
+theta_1_0 = 4183.8
+A_1 = 722998.709847493
+B_1 = 0.4034
+V_e = 6.02214076e-07
+alpha_0 = 1.58e-05
+kappa = 0.81
+
+[reported_values]
+V_0_angstrom3_per_atom = 9.6061
+phi_0_eV_per_atom = -6.5
+V_p_angstrom3_per_atom = 1.35
+A_A_angstrom_minus3 = 0.4354
+A_B_angstrom_minus3 = 0.4354
+A_1_angstrom_minus3 = 0.4354
+V_e_angstrom3_per_atom = 1.0
+
+[parameter_status]
+V_0 = "reported Table I cold-curve parameter; converted from Angstrom^3/atom to m^3/mol"
+B_0 = "reported Table I cold-curve parameter; converted from GPa to Pa"
+B_0_prime = "reported Table I cold-curve parameter"
+phi_0 = "reported Table I cold energy; converted from eV/atom to J/mol"
+theta_A_0 = "reported Table I quasiharmonic phonon parameter"
+theta_B_0 = "reported Table I quasiharmonic phonon parameter"
+theta_1_0 = "reported Table I quasiharmonic phonon first-moment parameter"
+A_A = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_B = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_1 = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+alpha_0 = "reported Table I electronic excitation coefficient in K^-1"
+kappa = "reported Table I exponent"
+
+[equations]
+theta_volume = "theta_i(V) = theta_i0 * (V/V_p)^(-B_i) * exp[A_i*(V_p - V)]"
+gruneisen_each_moment = "gamma_i(V) = A_i*V + B_i"
+double_debye = "F_ion = ((theta_B-theta_1)/(theta_B-theta_A))*F_A + ((theta_1-theta_A)/(theta_B-theta_A))*F_B"
+quadratic_correction = "F_corr = -0.5 * alpha(V) * T^2 * k_B per atom; alpha(V)=alpha_0*(V/V_e)^kappa"
+
+[other]
+notes = "The authors explicitly use a conventional single-Debye model for simple hexagonal carbon because its phonon moments are nearly equal. Table I lists identical A/B/1 characteristic-temperature parameters; these are preserved even though the actual model is single-Debye."

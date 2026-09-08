@@ -1,0 +1,34 @@
+unique_id = "miozzi2018"
+
+[science]
+material = "silicon carbide"
+formula = "SiC"
+phase = "B3"
+crystal = "zinc blende"
+physical_state = "solid"
+method = "laser-heated DAC synchrotron XRD"
+
+[data]
+file = "miozzi2018_b3sic_thermo.dat"
+raw_file = "miozzi2018_b3sic_thermo_raw.dat"
+source_product = "AGU Data Set S1"
+status = "author-supplied numerical data; SI conversion and density are derived"
+
+[validity]
+min_p = 29790173513.1513
+max_p = 64950610194.5922
+min_t = 300
+max_t = 3212
+min_rho = 3525.75191490287
+max_rho = 3919.71081340201
+
+[conversion]
+cell_formula_units = 4
+molar_mass = 0.040096
+molar_mass_unit = "kg/mol"
+volume_conversion = "V_molar = V_cell * 1e-30 * N_A / 4"
+density_conversion = "rho = molar_mass / V_molar"
+uncertainty_conversion = "dV_molar uses the same linear factor; drho = rho * dV_cell / V_cell; molar-mass uncertainty neglected"
+
+[other]
+notes = "Source row order preserved. Source-reported zero volume uncertainties, where present, are preserved as zero and are not database-filled missing values. B3 sheet does not provide a rowwise dT column; no dT column is invented. The main paper states an assumed ±150 K sample-temperature uncertainty for laser-heated measurements. B1 Data Set S1 supplies dT row by row."

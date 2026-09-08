@@ -1,7 +1,7 @@
 unique_id = "attia2026"
 
 [science]
-material = "magnesium silicate"
+material = "magnesium metasilicate"
 formula = "MgSiO3"
 phase = ["lp-clinoenstatite", "orthoenstatite", "hp-clinoenstatite", "bridgmanite", "post-perovskite", "liquid"]
 crystal = "clinoenstatite (P2_1/c, C2/c), orthoenstatite (Pbca), perovskite (Pbnm), post-perovskite (Cmcm)"

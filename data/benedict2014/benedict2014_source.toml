@@ -1,0 +1,18 @@
+unique_id = "benedict2014"
+citation = "Benedict et al. 2014"
+date = "2014-06-30"
+year = 2014
+title = "Multiphase equation of state for carbon addressing high pressures and temperatures"
+authors = ["Lorin X. Benedict", "Kevin P. Driver", "Sebastien Hamel", "Burkhard Militzer", "Tingting Qi", "Alfredo A. Correa", "A. Saul", "Eric Schwegler"]
+journal = "Physical Review B"
+volume = 89
+article = "224109"
+doi = "https://doi.org/10.1103/PhysRevB.89.224109"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "Five-phase ab initio carbon EOS: diamond, BC8, simple cubic, simple hexagonal, and liquid/plasma. The supplied supplementary material contains author tables of solid DFT-MD, liquid DFT-MD, and liquid PIMC pressure/internal-energy data."

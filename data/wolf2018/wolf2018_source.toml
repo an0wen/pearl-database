@@ -1,0 +1,18 @@
+unique_id = "wolf2018"
+citation = "Wolf & Bower 2018"
+date = "2018-02-23"
+year = 2018
+title = "An equation of state for high pressure-temperature liquids (RTpress) with application to MgSiO3 melt"
+authors = ["Aaron S. Wolf", "Dan J. Bower"]
+journal = "Physics of the Earth and Planetary Interiors"
+volume = 278
+pages = "59-74"
+doi = "https://doi.org/10.1016/j.pepi.2018.02.004"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "Received 2017-04-06; revised 2018-02-01; accepted 2018-02-18; available online 2018-02-23."

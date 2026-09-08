@@ -1,0 +1,77 @@
+unique_id = "musella2019"
+
+[science]
+material = "magnesium oxide"
+formula = "MgO"
+phase = "B2"
+crystal = "CsCl-type cubic"
+physical_state = "solid"
+method = "finite-temperature LDA DFT ab initio molecular dynamics"
+
+[description]
+type = "fit"
+cold_type = "Holzapfel"
+thermal_exist = true
+thermal_type = "Einstein quasi-harmonic + combined anharmonic/electronic quadratic term"
+reference_temperature = 0.0
+
+[validity]
+range_type = "B2 AIMD simulation/fitting domain reported by Musella et al.; nonrectangular"
+max_p = 12.0e12
+min_t = 5000.0
+max_t = 45000.0
+min_rho = 6510.0
+max_rho = 22570.0
+notes = "The B2 AIMD isochores explicitly listed in Section II.B span rho = 6.76-22.57 g/cm^3 and T = 5000-45000 K. The authors additionally state that the global B2 fit starts slightly below the B1-B2 transition at rho = 6.51 g/cm^3. B2 remains dynamically stable in their simulations to 120 Mbar. A precise universal minimum pressure for the fitted domain is not tabulated, so min_p is intentionally omitted."
+
+[parameters]
+V_0 = 10.970e-6
+V_0_status = "fitted; converted from 10.970 cm^3/mol"
+K_0 = 120.76e9
+K_0_status = "fitted"
+K_0_prime = 4.803
+K_0_prime_status = "fitted; dimensionless pressure derivative"
+theta_0 = 447.906
+theta_0_status = "fitted"
+gamma_0 = 1.755
+gamma_0_status = "fitted"
+beta = -0.530
+beta_status = "fitted"
+gamma_inf = -7.579e-2
+gamma_inf_status = "fitted"
+a_0 = -1.341e-4
+a_0_unit = "K^-1"
+a_0_status = "fitted"
+m = 0.660
+m_status = "fitted"
+n_atoms = 2
+n_atoms_status = "reported for MgO in the Einstein thermal term"
+Z = 20
+Z_status = "derived total atomic number for MgO; required by the Holzapfel free-electron-gas pressure scale"
+
+[model]
+free_energy = "F(V,T) = E_cold(V) + F_harm(V,T) + F_anh(V,T) + F_el(V,T)"
+cold_equation = "Holzapfel form, source Eq. 2"
+gruneisen = "gamma = gamma_inf + (gamma_0 - gamma_inf)*(V/V_0)^beta"
+einstein_temperature = "source Eq. 5"
+anharmonic_electronic_pressure = "P_ae = (3R/(2V))*m*a_0*(V/V_0)^m*T^2"
+fit_strategy = "global simultaneous fit of the complete pressure formulation to AIMD results; cold and thermal contributions were not fitted separately"
+fit_accuracy = "authors report calculated pressures reproduced to better than 2 percent"
+
+[implementation.magrathea]
+status = "partially faithful implementation; review recommended"
+eos_type = "Holzapfel"
+V_0_reported = 10.970
+V_0_reported_unit = "cm^3/mol"
+K_0_reported = 120.76
+K_0_reported_unit = "GPa"
+K_0_prime_reported = 4.803
+theta_0_reported = 447.906
+gamma_0_reported = 1.755
+beta_reported = -0.530
+gamma_inf_reported = -0.07579
+n_atoms_reported = 2
+Z_reported = 20
+
+[other]
+notes = "No parameter uncertainties are reported in Table I. Only the B2 analytical EOS is curated: the paper provides the complete nine-parameter B2 EOS in Table I but does not provide an analogous analytical B1 parameter table. The individual AIMD P-T points are plotted in Fig. 1 rather than tabulated numerically, so no thermo table is created and no points are digitized from the figure."

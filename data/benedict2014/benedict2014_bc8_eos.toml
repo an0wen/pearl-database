@@ -1,0 +1,67 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "bc8"
+crystal = "BC8"
+physical_state = "solid"
+method = "PBE-GGA DFT cold curves, phonon calculations, and DFT-MD validation"
+
+[description]
+type = "free-energy fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "double-Debye quasiharmonic + small volume-independent anharmonic T^2 correction"
+reference_temperature = 0.0
+
+[parameters]
+V_0 = 3.759020262392e-06
+B_0 = 221200000000
+B_0_prime = 4.697
+phi_0 = -839904.816133414
+V_p = 1.912631905376e-06
+theta_A_0 = 1961.9
+A_A = 0
+B_A = 0
+theta_B_0 = 3176.3
+A_B = 259044.09447912
+B_B = 0.532
+theta_1_0 = 2800.6
+A_1 = 185980.375523471
+B_1 = 0.449
+V_e = 3.057440863852e-06
+alpha_0 = 5.5e-05
+kappa = 0
+
+[reported_values]
+V_0_angstrom3_per_atom = 6.242
+phi_0_eV_per_atom = -8.705
+V_p_angstrom3_per_atom = 3.176
+A_A_angstrom_minus3 = 0.0
+A_B_angstrom_minus3 = 0.156
+A_1_angstrom_minus3 = 0.112
+V_e_angstrom3_per_atom = 5.077
+
+[parameter_status]
+V_0 = "reported Table I cold-curve parameter; converted from Angstrom^3/atom to m^3/mol"
+B_0 = "reported Table I cold-curve parameter; converted from GPa to Pa"
+B_0_prime = "reported Table I cold-curve parameter"
+phi_0 = "reported Table I cold energy; converted from eV/atom to J/mol"
+theta_A_0 = "reported Table I quasiharmonic phonon parameter"
+theta_B_0 = "reported Table I quasiharmonic phonon parameter"
+theta_1_0 = "reported Table I quasiharmonic phonon first-moment parameter"
+A_A = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_B = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_1 = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+alpha_0 = "reported Table I anharmonic ion-thermal coefficient in K^-1"
+kappa = "reported Table I exponent"
+
+[equations]
+theta_volume = "theta_i(V) = theta_i0 * (V/V_p)^(-B_i) * exp[A_i*(V_p - V)]"
+gruneisen_each_moment = "gamma_i(V) = A_i*V + B_i"
+double_debye = "F_ion = ((theta_B-theta_1)/(theta_B-theta_A))*F_A + ((theta_1-theta_A)/(theta_B-theta_A))*F_B"
+quadratic_correction = "F_corr = -0.5 * alpha(V) * T^2 * k_B per atom; alpha(V)=alpha_0*(V/V_e)^kappa"
+
+[other]
+notes = "This file stores the complete source free-energy parameterization, including the full phonon-moment representation and the quadratic correction term."

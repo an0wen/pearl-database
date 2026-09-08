@@ -1,0 +1,18 @@
+unique_id = "smith2018"
+citation = "Smith et al. 2018"
+date = "2018-04-16"
+year = 2018
+title = "Equation of state of iron under core conditions of large rocky exoplanets"
+authors = ["Raymond F. Smith", "Dayne E. Fratanduono", "David G. Braun", "Thomas S. Duffy", "June K. Wicks", "Peter M. Celliers", "Suzanne J. Ali", "Amalia Fernandez-Pañella", "Richard G. Kraus", "Damian C. Swift", "Gilbert W. Collins", "Jon H. Eggert"]
+journal = "Nature Astronomy"
+volume = 2
+pages = "452-458"
+doi = "https://doi.org/10.1038/s41550-018-0437-9"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "The publisher records an Author Correction published 2018-04-24 (DOI 10.1038/s41550-018-0477-1) correcting only the spelling of M. Herrmann in the acknowledgements; no EOS values are affected. ADS/bibcode were not independently verified in this curation pass."

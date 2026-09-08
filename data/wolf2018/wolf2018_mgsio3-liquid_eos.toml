@@ -1,0 +1,96 @@
+unique_id = "wolf2018"
+
+[science]
+material = "magnesium metasilicate"
+formula = "MgSiO3"
+phase = "liquid"
+physical_state = "liquid"
+method = "RTpress fit to classical molecular-dynamics P-V-T-E data of Spera et al. 2011 (S11 model)"
+
+[description]
+type = "fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "RTpress"
+reference_temperature = 3000.0
+gruneisen_type = "finite-strain reference-adiabat model of Stixrude & Lithgow-Bertelloni 2005"
+
+[validity]
+range_type = "approximate S11 calibration domain reported by Wolf & Bower 2018"
+min_p = 0.0
+max_p = 150e9
+min_t = 2500.0
+max_t = 5000.0
+
+[parameters]
+T_0 = 3000.0
+m_rt = 0.6
+m_rt_status = "fixed to theoretical Rosenfeld-Tarazona value; not fitted"
+
+V_0 = 3.899035035062e-05
+dV_0 = 5.419926684e-08
+V_0_basis = "m^3/mol MgSiO3; derived from reported 12.949(18) Angstrom^3/atom using 5 atoms per MgSiO3 formula unit"
+
+K_0 = 13.20e9
+dK_0 = 0.19e9
+K_0_prime = 8.238
+dK_0_prime = 0.049
+
+E_0 = -9935721.80339603
+dE_0 = 916.610655171445
+E_0_basis = "J/mol MgSiO3; converted from -20.5953(19) eV/atom"
+E_0_status = "fitted simulation-energy offset; not an absolute thermochemical reference energy"
+
+gamma_0 = 0.1899
+dgamma_0 = 0.0053
+gamma_0_prime = -1.940
+dgamma_0_prime = 0.035
+gamma_0_prime_definition = "V0 * (d gamma / dV) at the zero-pressure reference state"
+
+b_0 = 473791.223391514
+db_0 = 4679.53860798054
+b_1 = 296692.396279178
+db_1 = 28945.599636993
+b_2 = 631978.925407681
+db_2 = 130255.198366469
+b_3 = -1447279.98184965
+db_3 = 820125.323048135
+b_4 = -1977949.30852786
+db_4 = 1399037.315788
+b_units = "J/mol MgSiO3"
+b_definition = "b(V) = sum_n b_n * (V/V0 - 1)^n"
+
+[model]
+reference_isotherm = "Vinet, paper Eq. 6"
+reference_adiabat = "finite-strain gamma model, paper Eq. 7 and Appendix A"
+thermal_energy = "generalized Rosenfeld-Tarazona perturbation, paper Eqs. 8-12"
+pressure = "thermodynamically consistent derivative of Helmholtz free energy, paper Eqs. 13-14"
+n_atoms_per_formula_unit = 5
+
+[validation]
+status = "independent comparison, not fitting domain"
+notes = "The S11 RTpress fit reproduces its MD training data with average residuals of about 0.6 GPa, 0.1 Angstrom^3/atom, and 6 meV/atom. The authors also compare predicted MgSiO3-glass Hugoniot densities and temperatures with shock experiments; the terrestrial-mantle region is described approximately as 50-150 GPa and 3000-6000 K."
+
+[implementation.magrathea]
+status = "implementation conversion checked against supplied EOSlist.cpp"
+eqntype = 10
+V_0_reported_by_magrathea = 38.99
+V_0_reported_unit = "cm^3/mol"
+K_0_reported_by_magrathea = 13.2
+K_0_reported_unit = "GPa"
+K_0_prime_reported_by_magrathea = 8.238
+gamma_0_reported_by_magrathea = 0.1899
+m_rt_reported_by_magrathea = 0.6
+gamma_0_prime_reported_by_magrathea = -1.94
+T_0_reported_by_magrathea = 3000.0
+b_reported_by_magrathea = [4.738e12, 2.97e12, 6.32e12, -1.4e13, -2.0e13]
+b_reported_unit = "erg/mol"
+notes = "MAGRATHEA uses the S11 parameter set and rounds the per-atom-to-molar b conversions. It omits E0 because its planetary-structure pressure-density-temperature use does not require the absolute simulation energy offset."
+
+[software]
+name = "xmeos (Xtal-Melt EOS)"
+repository = "https://github.com/aswolf/xmeos"
+status = "author-reported open-source analysis/fitting implementation; repository availability should be rechecked by a human curator"
+
+[other]
+notes = "Only the preferred/high-resolution S11 fit is curated as the MAGRATHEA-linked EOS. Table 1 also reports a dK09 fit to de Koker & Stixrude 2009 FPMD data; it is retained as an omitted alternative rather than a separate PEARL EOS because it is an alternate calibration of the same RTpress formulation. The authors favor fixed m=0.6 and show that freeing m gives negligible fit improvement."

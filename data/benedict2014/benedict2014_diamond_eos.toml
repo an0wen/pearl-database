@@ -1,0 +1,75 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "diamond"
+crystal = "diamond cubic"
+physical_state = "solid"
+method = "PBE-GGA DFT cold curves, phonon calculations, and DFT-MD validation"
+
+[description]
+type = "free-energy fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "double-Debye quasiharmonic + small volume-independent anharmonic T^2 correction"
+reference_temperature = 0.0
+
+[parameters]
+V_0 = 3.4346677610584e-06
+B_0 = 432400000000
+B_0_prime = 3.793
+phi_0 = -874736.021029929
+V_p = 3.354934617396e-06
+theta_A_0 = 1887.8
+A_A = -524730.345226936
+B_A = 0.913
+theta_B_0 = 1887.8
+A_B = 278970.563285206
+B_B = 0.429
+theta_1_0 = 1887.8
+A_1 = 140481.605082907
+B_1 = 0.499
+V_e = 3.48380842966e-06
+alpha_0 = 3.79e-05
+kappa = 0
+
+[reported_values]
+V_0_angstrom3_per_atom = 5.7034
+phi_0_eV_per_atom = -9.066
+V_p_angstrom3_per_atom = 5.571
+A_A_angstrom_minus3 = -0.316
+A_B_angstrom_minus3 = 0.168
+A_1_angstrom_minus3 = 0.0846
+V_e_angstrom3_per_atom = 5.785
+
+[parameter_status]
+V_0 = "reported Table I cold-curve parameter; converted from Angstrom^3/atom to m^3/mol"
+B_0 = "reported Table I cold-curve parameter; converted from GPa to Pa"
+B_0_prime = "reported Table I cold-curve parameter"
+phi_0 = "reported Table I cold energy; converted from eV/atom to J/mol"
+theta_A_0 = "reported Table I quasiharmonic phonon parameter"
+theta_B_0 = "reported Table I quasiharmonic phonon parameter"
+theta_1_0 = "reported Table I quasiharmonic phonon first-moment parameter"
+A_A = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_B = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+A_1 = "reported Table I volume-dependence coefficient; converted from Angstrom^-3 to mol/m^3"
+alpha_0 = "reported Table I anharmonic ion-thermal coefficient in K^-1"
+kappa = "reported Table I exponent"
+
+[equations]
+theta_volume = "theta_i(V) = theta_i0 * (V/V_p)^(-B_i) * exp[A_i*(V_p - V)]"
+gruneisen_each_moment = "gamma_i(V) = A_i*V + B_i"
+double_debye = "F_ion = ((theta_B-theta_1)/(theta_B-theta_A))*F_A + ((theta_1-theta_A)/(theta_B-theta_A))*F_B"
+quadratic_correction = "F_corr = -0.5 * alpha(V) * T^2 * k_B per atom; alpha(V)=alpha_0*(V/V_e)^kappa"
+
+[validity]
+range_type = "direct diamond DFT-MD validation domain stated by authors"
+min_t = 2000.0
+max_t = 9000.0
+min_volume_per_atom = 3.0e-30
+max_volume_per_atom = 5.6e-30
+
+
+[other]
+notes = "For diamond, the nonzero alpha_0 in Table I is the small anharmonic ion-thermal correction inherited from Correa et al. 2008; electronic excitations are essentially zero throughout diamond stability. The direct DFT-MD supplementary table provides validation data, not the primary fit inputs: the free-energy model was constrained by cold curves, phonon DOS, and the small anharmonic correction."

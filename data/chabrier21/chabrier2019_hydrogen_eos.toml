@@ -1,0 +1,23 @@
+unique_id = "chabrier2019"
+
+[science]
+material = "hydrogen"
+formula = "H"
+phase = "fluid/plasma"
+physical_state = "fluid/plasma"
+method = "wide-range composite tabulated EOS"
+
+[description]
+type = "tabulated"
+thermal_exist = true
+representation = "author-distributed EOS tables"
+
+[software]
+official_directory = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/"
+
+[tables]
+tp = "TABLE_H_TP_v1"
+trho = "TABLE_H_Trho_v1"
+
+[other]
+notes = "Pure-hydrogen EOS from Chabrier, Mazevet & Soubiran (2019). Use the author-distributed tables directly."

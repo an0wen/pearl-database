@@ -1,0 +1,36 @@
+unique_id = "journaux2020"
+
+[science]
+material = "water"
+formula = "H2O"
+phase = "ice-V"
+physical_state = "solid"
+method = "cryo-cooled diamond-anvil-cell synchrotron X-ray diffraction"
+
+[data]
+file = "journaux2020_ice-V_thermo.dat"
+raw_file = "journaux2020_ice-pvt_thermo_raw.dat"
+conversion_script = "journaux2020_ice-pvt_thermo.py"
+source_location = "Table 4, p. 9"
+status = "reported experimental P-T-cell-volume data; manually transcribed and converted to SI"
+
+[validity]
+range_type = "reported Table 4 extrema for this phase"
+min_p = 421000000
+max_p = 779000000
+min_t = 222.3
+max_t = 262.3
+
+[columns.V_cell]
+unit = "m^3"
+status = "converted from reported crystallographic cell volume in Angstrom^3"
+notes = "No molar-volume or density conversion is performed here because Table 4 reports cell volumes and a cell-content conversion is unnecessary for preserving the experimental data."
+
+[uncertainty]
+dP = 30e6
+dT = 0.5
+dV_cell = 5e-33
+status = "typical uncertainties reported in Table 4 note"
+
+[other]
+notes = "The standardized table preserves the source row order within the phase."

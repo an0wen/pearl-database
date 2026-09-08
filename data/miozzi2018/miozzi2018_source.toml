@@ -1,0 +1,18 @@
+unique_id = "miozzi2018"
+citation = "Miozzi et al. 2018"
+date = "2018-09-06"
+year = 2018
+title = "Equation of State of SiC at Extreme Conditions: New Insight Into the Interior of Carbon-Rich Exoplanets"
+authors = ["F. Miozzi", "G. Morard", "D. Antonangeli", "A. N. Clark", "M. Mezouar", "C. Dorn", "A. Rozel", "G. Fiquet"]
+journal = "Journal of Geophysical Research: Planets"
+volume = 123
+pages = "2295-2309"
+doi = "https://doi.org/10.1029/2018JE005582"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "Received 2018-02-26; accepted 2018-07-26; accepted article online 2018-08-06; published online 2018-09-06. Primary numerical data are supplied in AGU Data Set S1."

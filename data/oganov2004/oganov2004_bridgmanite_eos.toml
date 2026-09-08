@@ -1,0 +1,58 @@
+unique_id = "oganov2004"
+
+[science]
+material = "magnesium metasilicate"
+formula = "MgSiO3"
+phase = "bridgmanite"
+crystal = "Pbnm"
+physical_state = "solid"
+method = "GGA PAW DFT"
+
+[description]
+type = "fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "Debye Mie-Gruneisen; thermal parameters adopted from earlier Oganov et al. work"
+
+[validity]
+range_type = "computational pressure domain shown for the GGA static calculations in Fig. 2a; not an author-recommended extrapolation range"
+min_p = 20e9
+max_p = 160e9
+
+[parameters]
+V_0 = 2.520567015098e-05
+K_0 = 230.05e9
+K_0_prime = 4.142
+P_0 = -11.2e9
+theta_0 = 1000.0
+gamma_0 = 1.506
+beta = 7.02469
+gamma_inf = 1.14821
+
+[parameter_status]
+V_0 = "reported GGA Table 2 cell volume 167.42 Angstrom^3, converted to molar volume using Z=4 MgSiO3 formula units per Pbnm cell"
+K_0 = "reported GGA Table 2 Vinet parameter"
+K_0_prime = "reported GGA Table 2 Vinet parameter"
+P_0 = "Magrathea implementation parameter; not reported in Oganov & Ono 2004; corresponds to the -11.2 GPa GGA pressure correction used in later Oganov/Ono treatment and attributed there to Oganov et al. 2001"
+theta_0 = "Magrathea implementation parameter; not reported in Oganov & Ono 2004"
+gamma_0 = "Magrathea implementation parameter; not reported in Oganov & Ono 2004; consistent with the earlier Oganov et al. 2001 bridgmanite thermal EOS cited as refs. 20-21"
+beta = "Magrathea implementation parameter; not reported in Oganov & Ono 2004; consistent with the earlier Oganov et al. 2001 bridgmanite thermal EOS cited as refs. 20-21"
+gamma_inf = "Magrathea implementation parameter; not reported in Oganov & Ono 2004; consistent with the earlier Oganov et al. 2001 bridgmanite thermal EOS cited as refs. 20-21"
+
+[reported_values]
+V_0_cell_angstrom3 = 167.42
+Z_formula_units_per_cell = 4
+
+[implementation]
+source = "Magrathea EOSlist.cpp"
+magrathea_name = "Brg (Oganov)"
+magrathea_eqntype = 2
+notes = "Magrathea labels this the default bridgmanite/perovskite MgSiO3 EOS from Oganov & Ono 2004, Nature, GGA. Its V0=25.206 cm^3/mol is reproduced by converting the reported Table 2 GGA Pbnm cell volume 167.42 Angstrom^3 with Z=4."
+
+[provenance]
+source_location = "Table 2, p. 447"
+volume_conversion = "Pbnm MgSiO3 perovskite has Z=4 formula units per conventional cell. V_m = (167.42 Angstrom^3 / 4) * N_A * 1e-30 m^3/Angstrom^3, using exact N_A = 6.02214076e23 mol^-1."
+thermal_parameter_sources = "Oganov & Ono 2004 cites Oganov, Brodholt & Price 2001 Nature 411, 934-937 and Earth Planet. Sci. Lett. 184, 555-560 for MgSiO3 perovskite elasticity and thermal EOS. The 2004 paper itself does not print the Magrathea theta_0/gamma parameter set."
+
+[other]
+notes = "The GGA parameter set is curated because Magrathea explicitly uses the GGA Oganov & Ono 2004 bridgmanite EOS as its default. The LDA Table 2 alternative (V0=163.35 Angstrom^3, K0=259.82 GPa, K0'=4.060) is not stored as a separate EOS."

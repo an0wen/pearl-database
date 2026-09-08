@@ -1,0 +1,64 @@
+unique_id = "smith2018"
+
+[science]
+material = "iron"
+formula = "Fe"
+phase = "gamma"
+crystal = "hcp"
+physical_state = "solid"
+method = "NIF ramp compression; Vinet fit to isentrope with Magrathea thermal implementation"
+
+[description]
+type = "fit"
+cold_type = "Vinet"
+thermal_exist = true
+thermal_type = "Debye Mie-Gruneisen with Altshuler-form gamma(V), as implemented in Magrathea"
+reference_temperature = 300.0
+
+[validity]
+range_type = "source-data/calibration extrema from Supplementary Table 1a"
+min_p = 57.8e9
+max_p = 1374e9
+min_rho = 10.18e3
+max_rho = 20.0e3
+
+[parameters]
+rho_0 = 8.43e3
+K_0 = 177.7e9
+dK_0 = 0.6e9
+K_0_prime = 5.64
+dK_0_prime = 0.01
+theta_0 = 322.0
+gamma_0 = 2.09
+beta = 1.01
+gamma_inf = 0.0500
+
+[parameter_status]
+rho_0 = "adopted by Smith et al. from Kerley (1993) for epsilon-Fe; used in Smith Vinet density form"
+K_0 = "reported best-fit Smith et al. 2018"
+dK_0 = "reported 1-sigma uncertainty from 177.7(6) GPa"
+K_0_prime = "reported best-fit Smith et al. 2018"
+dK_0_prime = "reported 1-sigma uncertainty from 5.64(1)"
+theta_0 = "adopted/estimated by Smith et al. 2018 from their ref. 16; used by Magrathea"
+gamma_0 = "Magrathea fit to Smith et al. 2018 Fig. 3b; not author-reported by Smith et al."
+beta = "Magrathea fit to Smith et al. 2018 Fig. 3b; not author-reported by Smith et al."
+gamma_inf = "Magrathea fit to Smith et al. 2018 Fig. 3b; not author-reported by Smith et al."
+reference_temperature = "Magrathea implementation default; not a Smith et al. reported reference temperature for the Vinet fit"
+
+[equations]
+vinet = "P(rho) = 3*K_0*X^(-2)*(1-X)*exp((1.5*K_0_prime-1.5)*(1-X)); X=(rho_0/rho)^(1/3)"
+gamma_volume = "gamma(V) = gamma_inf + (gamma_0-gamma_inf)*(V/V_0)^beta"
+
+[implementation]
+source = "Magrathea EOSlist.cpp and EOS.cpp"
+magrathea_eqntype = 2
+magrathea_theta_0 = 322.0
+magrathea_gamma_0 = 2.09
+magrathea_beta = 1.01
+magrathea_gamma_inf = 0.0500
+magrathea_atoms_per_formula = 1
+magrathea_atomic_number = 26
+notes = "EOSlist.cpp labels this as the default hcp-Fe EOS and states that the Gruneisen parameters were determined by fitting Smith et al. Fig. 3b. Magrathea v1 states the fit used its Eq. 13 and maximum-likelihood estimation. EOS.cpp implements the Altshuler volume form given above."
+
+[other]
+notes = "Important provenance distinction: Smith et al. fit the Vinet expression to the measured isentrope, not to a 300 K isotherm. Magrathea then uses this Vinet curve in its generic thermal EOS machinery with a 300 K implementation default and a Debye/Gruneisen thermal correction. The 300 K anchor and the gamma(V) fit are therefore implementation-level choices, not Smith et al. author-reported fit parameters. No temperature validity range is assigned because Supplementary Table 1a does not tabulate T."

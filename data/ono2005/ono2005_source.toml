@@ -1,0 +1,18 @@
+unique_id = "ono2005"
+citation = "Ono & Oganov 2005"
+date = "2005-07-14"
+year = 2005
+title = "In situ observations of phase transition between perovskite and CaIrO3-type phase in MgSiO3 and pyrolitic mantle composition"
+authors = ["Shigeaki Ono", "Artem R. Oganov"]
+journal = "Earth and Planetary Science Letters"
+volume = 236
+pages = "914-932"
+doi = "https://doi.org/10.1016/j.epsl.2005.06.001"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "This PEARL curation includes only pure MgSiO3 results. KLB-1 peridotite / pyrolitic-composition results are intentionally excluded."
