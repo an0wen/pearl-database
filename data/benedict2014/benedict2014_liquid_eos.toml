@@ -1,0 +1,62 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "liquid"
+physical_state = "liquid/plasma"
+method = "DFT-MD + PIMC constrained wide-range free-energy model"
+
+[description]
+type = "free-energy fit"
+cold_type = "Vinet with four break-point corrections"
+thermal_exist = true
+thermal_type = "Chisolm-Wallace ion thermal + FAST high-T decay + average-atom DFT electronic excitation"
+
+[validity]
+range_type = "source model scope"
+min_rho = 3000.0
+max_rho = 20000.0
+min_t = 0.0
+notes = "Abstract states 3-20 g/cm^3 and 0 K < T < infinity for the multiphase EOS. Liquid calibration uses DFT-MD to 100000 K and PIMC above ~200000 K to >1e8 K, primarily over ~3-12 g/cm^3 with selected higher-density DFT calculations."
+
+[parameters]
+V_0 = 5.176632197296e-06
+B_0 = 51110000000
+B_0_prime = 5.848
+phi_0 = -723639.990924825
+V_p = 4.03182323882e-06
+theta_0 = 520.0
+A = 0.0
+B = 0.84
+
+[[breakpoints]]
+V_b = 2.3486348964e-06
+n = 3.0
+a = -482426.66061655
+b = 5.0
+
+[[breakpoints]]
+V_b = 1.6259780052e-06
+n = 3.0
+a = 964853.3212331
+b = 3.0
+
+[[breakpoints]]
+V_b = 1.1442067444e-06
+n = 2.0
+a = -3859413.2849324
+b = 5.0
+
+[[breakpoints]]
+V_b = 6.8050190588e-07
+n = 3.0
+a = 7718826.5698648
+b = 5.0
+
+[provenance]
+source_location = "Table II and Section III.B"
+notes = "The preferred liquid model is the authors' Chisolm-Wallace + FAST + average-atom DFT construction. The full electronic average-atom contribution is algorithmic rather than reducible to the scalar Table II parameters; Table II parameters and model identity are preserved here."
+
+[other]
+notes = "The liquid/plasma EOS is materially more complex than the solid analytical forms. PEARL stores the reported scalar parameters and model components without pretending that Table II alone is a standalone complete implementation."

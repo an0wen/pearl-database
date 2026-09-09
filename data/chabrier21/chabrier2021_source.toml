@@ -1,0 +1,23 @@
+unique_id = "chabrier2021"
+citation = "Chabrier & Debras 2021"
+date = "2021-08-01"
+year = 2021
+title = "A New Equation of State for Dense Hydrogen-Helium Mixtures. II. Taking into Account Hydrogen-Helium Interactions"
+authors = ["Gilles Chabrier", "Florian Debras"]
+journal = "The Astrophysical Journal"
+volume = 917
+article = "4"
+doi = "https://doi.org/10.3847/1538-4357/abfc48"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[software]
+official_directory = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/"
+official_archive = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/DirEOS2021.tar.gz"
+table_release = "June 2021 v1"
+
+[other]
+notes = "2021 interaction-corrected H/He EOS. Built from an effective hydrogen EOS plus the 2019 helium EOS and constrained by Militzer & Hubbard (2013) QMD H/He simulations at Y≈0.245. The source explicitly cautions that the effective-H table is only an intermediate component for constructing mixtures and must not be used as a standalone pure-H EOS."

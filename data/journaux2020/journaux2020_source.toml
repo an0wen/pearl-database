@@ -1,0 +1,18 @@
+unique_id = "journaux2020"
+citation = "Journaux et al. 2020"
+date = "2020-01-01"
+year = 2020
+title = "Holistic Approach for Studying Planetary Hydrospheres: Gibbs Representation of Ices Thermodynamics, Elasticity, and the Water Phase Diagram to 2,300 MPa"
+authors = ["Baptiste Journaux", "J. Michael Brown", "Anna Pakhomova", "Ian E. Collings", "Sylvain Petitgirard", "P. Espinoza", "Tiziana Boffa Ballaran", "Steven D. Vance", "J. Ott", "F. Cova", "G. Garbarino", "M. Hanfland"]
+journal = "Journal of Geophysical Research: Planets"
+volume = 125
+article = "e2019JE006176"
+doi = "https://doi.org/10.1029/2019JE006176"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "The paper was accepted online on 2019-12-17 and published in the 2020 volume. Exact issue publication day was not established in this curation pass, so 2020-01-01 is used under the PEARL missing-date convention."

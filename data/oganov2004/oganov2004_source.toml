@@ -1,0 +1,18 @@
+unique_id = "oganov2004"
+citation = "Oganov & Ono 2004"
+date = "2004-07-22"
+year = 2004
+title = "Theoretical and experimental evidence for a post-perovskite phase of MgSiO3 in Earth's D'' layer"
+authors = ["Artem R. Oganov", "Shigeaki Ono"]
+journal = "Nature"
+volume = 430
+pages = "445-448"
+doi = "https://doi.org/10.1038/nature02701"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "This PEARL entry curates the MgSiO3 bridgmanite GGA Vinet EOS from Table 2 and records the directly reported GGA bridgmanite-to-post-perovskite theoretical phase boundary. Magrathea implementation parameters are retained with explicit provenance where they are adopted from earlier work rather than reported in this 2004 paper."

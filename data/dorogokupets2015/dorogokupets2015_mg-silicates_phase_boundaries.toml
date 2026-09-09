@@ -1,0 +1,66 @@
+unique_id = "dorogokupets2015"
+
+[science]
+material = ["magnesium orthosilicate", "magnesium metasilicate", "periclase"]
+formula = ["Mg2SiO4", "MgSiO3", "MgO"]
+physical_state = "solid"
+method = "thermodynamic phase-equilibrium calculation calibrated to experimental reference points"
+
+[[boundaries]]
+low_pressure_phase = "forsterite"
+high_pressure_phase = "wadsleyite"
+slope = 2.5e6
+slope_unit = "Pa/K"
+temperature_interval = [1500.0, 2400.0]
+status = "calculated by this work"
+notes = "Authors compare with literature slope 3.1 +/- 1.4 MPa/K."
+
+[[boundaries]]
+low_pressure_phase = "wadsleyite"
+high_pressure_phase = "ringwoodite"
+slope = 6.5e6
+slope_unit = "Pa/K"
+temperature_interval = [1500.0, 2400.0]
+status = "calculated by this work"
+notes = "Authors compare with literature slope 5.2 +/- 4.7 MPa/K."
+
+[[boundaries]]
+low_pressure_phase = "ringwoodite"
+high_pressure_products = ["bridgmanite", "periclase"]
+reaction = "Mg2SiO4 ringwoodite = MgSiO3 bridgmanite + MgO periclase"
+slope = -1.5e6
+slope_unit = "Pa/K"
+temperature_interval = [1500.0, 2400.0]
+status = "calculated by this work"
+notes = "Authors compare with literature slope -2.6 +/- 0.2 MPa/K."
+
+[[boundaries]]
+low_pressure_phase = "wadsleyite"
+high_pressure_products = ["bridgmanite", "periclase"]
+reaction = "Mg2SiO4 wadsleyite = MgSiO3 bridgmanite + MgO periclase"
+slope = -0.9e6
+slope_unit = "Pa/K"
+temperature_interval = [1500.0, 2400.0]
+status = "calculated by this work"
+
+[[boundaries]]
+low_pressure_phase = "akimotoite"
+high_pressure_phase = "bridgmanite"
+status = "calculated by this work"
+notes = "Boundary is shown in Fig. 5 and Gibbs energy was calibrated against experimental Akm=Prv equilibrium. No analytical slope/intercept is reported in text; curve was not digitized."
+
+[[boundaries]]
+low_pressure_phase = "bridgmanite"
+high_pressure_phase = "post-perovskite"
+status = "calculated by this work"
+notes = "Boundary is shown in Fig. 9 and agrees with experimental determinations. No analytical slope/intercept is reported in text; curve was not digitized."
+
+[[triple_points]]
+phases = ["wadsleyite", "ringwoodite", "bridgmanite + periclase"]
+P = 22e9
+T = 2200.0
+status = "reported calculated triple point"
+
+[provenance]
+source_location = "Fig. 5, Fig. 9, and Discussion, pp. 182-184"
+notes = "Only numerical boundary information explicitly stated in the text is stored. Fig. 5 and Fig. 9 curves were not digitized."

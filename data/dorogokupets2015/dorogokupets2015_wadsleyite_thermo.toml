@@ -1,0 +1,32 @@
+unique_id = "dorogokupets2015"
+
+[science]
+material = "magnesium orthosilicate"
+formula = "Mg2SiO4"
+phase = "wadsleyite"
+physical_state = "solid"
+method = "thermodynamic values calculated from the authors' fitted EOS"
+
+[data]
+file = "dorogokupets2015_wadsleyite_thermo.dat"
+raw_file = "dorogokupets2015_wadsleyite_thermo_raw.dat"
+conversion_script = "dorogokupets2015_thermo.py"
+source_location = "Table 4"
+status = "author-calculated tabulation manually transcribed; SI conversion and rho/V derivation by curator"
+
+[validity]
+range_type = "printed thermodynamic-table extrema, not EOS recommended bounds"
+min_p = 100000
+max_p = 20000000000
+min_t = 298.15
+max_t = 2000
+min_rho = 3272.92247257
+max_rho = 3823.6683153
+
+[derived]
+V = "V = x * V_0, using Table 1 V_0"
+rho = "rho = molar_mass / V"
+molar_mass = 0.1406931
+
+[other]
+notes = "The source table also prints a comparison DeltaG** from Holland & Powell (2011) for Tables 3-7. That secondary comparison column is omitted. The retained g column is the authors' DeltaG*."

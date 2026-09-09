@@ -1,0 +1,36 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "liquid/plasma"
+method = "all-electron path integral Monte Carlo"
+
+[data]
+file = "benedict2014_liquid-pimc_thermo.dat"
+raw_file = "benedict2014_liquid-pimc_thermo_raw.dat"
+source_file = "benedict2014_supplementary_raw.pdf"
+conversion_script = "benedict2014_thermo.py"
+status = "author-reported supplementary numerical data; units converted to SI"
+row_count = 36
+
+[validity]
+range_type = "supplementary table extrema"
+min_p = 55382000000
+max_p = 1.30822123e+16
+min_t = 249500.983
+max_t = 646705556
+min_volume_per_atom = 1.57846805e-30
+max_volume_per_atom = 1.99441277e-28
+
+[uncertainty]
+status = "reported PIMC statistical dP and dE are preserved and converted to SI"
+
+[conversion]
+volume = "V[m^3/mol] = V[Angstrom^3/atom] * 1e-30 * N_A"
+energy = "u[J/mol] = E[eV/atom] * e * N_A"
+avogadro_constant = 6.02214076e23
+electron_volt_joule = 1.602176634e-19
+
+[other]
+notes = "Source row order is preserved. No density is derived because the reported per-atom volume converts directly and unambiguously to molar volume."

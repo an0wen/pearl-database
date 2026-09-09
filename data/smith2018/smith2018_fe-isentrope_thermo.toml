@@ -1,0 +1,46 @@
+unique_id = "smith2018"
+
+[science]
+material = "iron"
+formula = "Fe"
+phase = "hcp"
+crystal = "hcp"
+physical_state = "solid"
+method = "NIF ramp compression; Lagrangian sound-speed analysis"
+
+[data]
+file = "smith2018_fe-isentrope_thermo.dat"
+raw_file = "smith2018_fe-isentrope_thermo_raw.dat"
+conversion_script = "smith2018_fe-isentrope_thermo.py"
+source_location = "Supplementary Information, Supplementary Table 1a, p. 2"
+status = "reported values, manually transcribed; units converted to SI"
+
+[validity]
+range_type = "reported table extrema"
+min_p = 57.8e9
+max_p = 1374e9
+min_rho = 10.18e3
+max_rho = 20.0e3
+
+[columns.rho]
+unit = "kg/m^3"
+status = "converted"
+reported_unit = "g/cm^3"
+
+[columns.drho]
+unit = "kg/m^3"
+status = "converted 1-sigma uncertainty"
+reported_unit = "g/cm^3"
+
+[columns.P]
+unit = "Pa"
+status = "converted"
+reported_unit = "GPa"
+
+[columns.dP]
+unit = "Pa"
+status = "converted 1-sigma uncertainty"
+reported_unit = "GPa"
+
+[other]
+notes = "The source table is an isentropic P-rho path. Temperature is not tabulated row by row and is therefore omitted. Reported zero uncertainties in the first row are preserved as zero; no missing values were replaced by zero. Source row order is preserved."

@@ -1,0 +1,52 @@
+unique_id = "miozzi2018"
+
+[science]
+material = "silicon carbide"
+formula = "SiC"
+phase = "B3"
+crystal = "zinc blende"
+physical_state = "solid"
+method = "laser-heated DAC synchrotron XRD"
+
+[description]
+type = "fit"
+cold_type = "bm3"
+thermal_exist = true
+thermal_type = "Holland-Powell thermal pressure"
+reference_temperature = 300.0
+
+[validity]
+range_type = "Data Set S1 sheet SiC_B3_EoS, labeled data points used for EoS refinement"
+min_p = 29790173513.1513
+max_p = 64950610194.5922
+min_t = 300
+max_t = 3212
+min_rho = 3525.75191490287
+max_rho = 3919.71081340201
+
+[parameters]
+V_0 = 1.24658313732e-05
+V_0_status = "fixed; source Table 2 adopts 82.80 Angstrom^3 per conventional cell from Nisr et al. 2017"
+K_0 = 224e9
+dK_0 = 2e9
+K_0_prime = 4.1
+dK_0_prime = 0.14
+T_0 = 300.0
+theta_E = 967.2
+theta_E_status = "fixed; deterministic correction from the authors stated theta_E = 0.806*theta_D with theta_D = 1200 K; Table 2 prints 976.2 K"
+alpha_V = 6.2e-6
+dalpha_V = 1.1e-6
+alpha_V_status = "fitted"
+
+[conversion]
+cell_formula_units = 4
+cell_formula_units_status = "crystallographic conversion for conventional cubic zinc-blende SiC cell"
+molar_mass = 0.040096
+molar_mass_status = "kg/mol; value used by supplied MAGRATHEA SiC implementation"
+
+[implementation.magrathea]
+status = "implementation differs from the preferred author planetary-model formulation"
+notes = "Supplied MAGRATHEA code labels a Vinet EOS as 'based on Miozzi et al. 2018 parameters but using Vinet equation for better high-pressure extrapolation'. That Vinet substitution is an implementation choice, not the authors' preferred cold fit. MAGRATHEA stores V0=12.47 cm^3/mol, K0=224 GPa, K0'=4.08, theta=1200 K, gamma0=1.06, and alpha-like coefficient 6.2."
+
+[other]
+notes = "Table 2 TP model is retained because Supporting Text S3 states that the planetary SiC mantle calculations use the third-order Birch-Murnaghan EOS and Holland-Powell thermal-pressure model. The paper also reports an MGD fit (K0=228(7) GPa, K0'=3.9(3), theta_D=1200 K fixed, gamma0=1.06 fixed, q=-1.3(5)); it is documented as an alternate, not a separate EOS. theta_E=967.2 K is used as the deterministic value from the authors stated relation theta_E=0.806*theta_D with theta_D=1200 K; the 976.2 K printed in Table 2 is treated as a typographical/arithmetic error."

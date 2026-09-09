@@ -1,0 +1,19 @@
+unique_id = "dorogokupets2015"
+citation = "Dorogokupets et al. 2015"
+date = "2015-01-01"
+year = 2015
+title = "The equations of state of forsterite, wadsleyite, ringwoodite, akimotoite, MgSiO3-perovskite, and postperovskite and phase diagram for the Mg2SiO4 system at pressures of up to 130 GPa"
+authors = ["P. I. Dorogokupets", "A. M. Dymshits", "T. S. Sokolova", "B. S. Danilov", "K. D. Litasov"]
+journal = "Russian Geology and Geophysics"
+volume = 56
+issue = "1-2"
+pages = "172-189"
+doi = "https://doi.org/10.1016/j.rgg.2015.01.011"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "Issue is January-February 2015; the exact publication day was not established, so 2015-01-01 is used according to PEARL missing-date convention."

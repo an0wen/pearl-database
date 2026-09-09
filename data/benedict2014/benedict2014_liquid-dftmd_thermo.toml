@@ -1,0 +1,33 @@
+unique_id = "benedict2014"
+
+[science]
+material = "carbon"
+formula = "C"
+phase = "liquid"
+method = "PBE-GGA DFT molecular dynamics"
+
+[data]
+file = "benedict2014_liquid-dftmd_thermo.dat"
+raw_file = "benedict2014_liquid-dftmd_thermo_raw.dat"
+source_file = "benedict2014_supplementary_raw.pdf"
+conversion_script = "benedict2014_thermo.py"
+status = "author-reported supplementary numerical data; units converted to SI"
+row_count = 414
+
+[validity]
+range_type = "supplementary table extrema"
+min_p = 132153596000
+max_p = 28461766000000
+min_t = 8000
+max_t = 100000
+min_volume_per_atom = 7.5e-31
+max_volume_per_atom = 5.39030478e-30
+
+[conversion]
+volume = "V[m^3/mol] = V[Angstrom^3/atom] * 1e-30 * N_A"
+energy = "u[J/mol] = E[eV/atom] * e * N_A"
+avogadro_constant = 6.02214076e23
+electron_volt_joule = 1.602176634e-19
+
+[other]
+notes = "Source row order is preserved. No density is derived because the reported per-atom volume converts directly and unambiguously to molar volume."

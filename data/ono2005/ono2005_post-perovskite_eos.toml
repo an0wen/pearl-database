@@ -1,0 +1,77 @@
+unique_id = "ono2005"
+
+[science]
+material = "magnesium metasilicate"
+formula = "MgSiO3"
+phase = "post-perovskite"
+crystal = "Cmcm"
+physical_state = "solid"
+method = "GGA PAW DFT and ab initio molecular dynamics"
+
+[description]
+type = "fit"
+cold_type = "BM3"
+thermal_exist = true
+thermal_type = "classical Mie-Gruneisen with volume-dependent Gruneisen parameter"
+reference_temperature = 2500.0
+
+[validity]
+range_type = "AIMD sampling/calibration domain reported by Ono & Oganov 2005; not an author-recommended extrapolation range"
+min_p = 0.0
+max_p = 160e9
+min_t = 1000.0
+max_t = 5000.0
+
+[parameters]
+V_2500 = 2.6361469516343e-05
+K_2500 = 166.911e9
+K_2500_prime = 4.473
+dK_dT_at_P = -0.0414e9
+dK_prime_dT_at_P = 0.000318
+gamma_0 = 1.553
+gamma_inf = 1.114
+beta = 4.731
+V_gamma_ref = 2.524330853073e-05
+pressure_shift = -11.2e9
+
+[parameter_status]
+V_2500 = "derived molar volume from reported 175.097 Angstrom^3 conventional Cmcm cell using Z=4 MgSiO3 formula units per cell"
+K_2500 = "reported in Table 3; converted from GPa to Pa"
+K_2500_prime = "reported in Table 3"
+dK_dT_at_P = "reported in Table 3 as -0.0414 GPa/K; converted to Pa/K"
+dK_prime_dT_at_P = "reported in Table 3"
+gamma_0 = "fitted by Ono & Oganov 2005 to AIMD results"
+gamma_inf = "fitted by Ono & Oganov 2005 to AIMD results"
+beta = "fitted by Ono & Oganov 2005 to AIMD results"
+V_gamma_ref = "derived molar reference volume from reported 167.67 Angstrom^3 conventional Cmcm cell using Z=4 MgSiO3 formula units per cell"
+pressure_shift = "reported correction applied to calculated EOS; represented as -11.2 GPa consistent with the stated downward pressure correction and Magrathea convention"
+
+[equations]
+gamma_volume = "gamma(V) = gamma_inf + (gamma_0 - gamma_inf) * (V / V_gamma_ref)^beta"
+thermal_pressure = "P(V,T) = P_static(V) + gamma(V) * 3*n*R*T / V"
+thermal_expansion = "alpha(T) = a + b*T + c*T^2"
+
+[thermal_expansion.at_0_gpa]
+a = 3.07e-5
+b = 0.0
+c = 3.86e-12
+
+[thermal_expansion.at_130_gpa]
+a = 1.17e-5
+b = 3.09e-10
+c = 0.0
+
+[provenance]
+source_location = "Table 3 and Section 2.2, p. 918"
+static_eos_source = "Oganov & Ono 2004, Nature 430, 445-448 (paper ref. 27)"
+pressure_shift_source = "Oganov et al. 2001 (paper ref. 40)"
+volume_conversion = "For post-perovskite MgSiO3, the paper states that a 4x1x2 CaIrO3-type supercell contains 160 atoms. MgSiO3 has 5 atoms per formula unit, so the supercell contains 32 formula units; divided by 8 crystallographic cells, this gives Z=4 formula units per Cmcm cell. Molar volume was calculated as V_m = (V_cell/Z) * N_A * 1e-30 m^3/Angstrom^3, using exact N_A = 6.02214076e23 mol^-1."
+notes = "Ono & Oganov 2005 combine the static EOS of ref. 27 with their calculated gamma(V) to construct the high-temperature Mie-Gruneisen EOS. The thermal model is described as valid in the classical high-temperature regime of the D'' layer; Table 3 notes that the thermal-expansion representation is valid above the Debye temperature (~1500 K)."
+
+[reported_values]
+V_2500_cell_angstrom3 = 175.097
+V_gamma_ref_cell_angstrom3 = 167.67
+Z_formula_units_per_cell = 4
+
+[other]
+notes = "The KLB-1 peridotite portion of Table 3 is intentionally omitted."

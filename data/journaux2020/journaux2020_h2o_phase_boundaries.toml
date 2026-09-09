@@ -1,0 +1,53 @@
+unique_id = "journaux2020"
+
+[science]
+material = "water"
+formula = "H2O"
+phase = ["ice-Ih", "ice-II", "ice-III", "ice-V", "ice-VI", "liquid"]
+method = "phase equilibrium from intersections of Gibbs-energy LBF surfaces"
+
+[[triple_points]]
+phases = ["ice-Ih", "ice-II", "ice-III"]
+P = 213e6
+T = 238.5
+status = "reference triple-point coordinate used to constrain the Gibbs representations"
+source = "Table 5; coordinate from Dunaeva et al. 2010"
+
+[[triple_points]]
+phases = ["ice-Ih", "ice-III", "liquid"]
+P = 208.566e6
+T = 251.165
+status = "reference triple-point coordinate used to constrain the Gibbs representations"
+source = "Table 5; coordinate from Wagner et al. 2011"
+
+[[triple_points]]
+phases = ["ice-III", "ice-V", "liquid"]
+P = 350.1e6
+T = 256.164
+status = "reference triple-point coordinate used to constrain the Gibbs representations"
+source = "Table 5; coordinate from Wagner et al. 2011"
+
+[[triple_points]]
+phases = ["ice-V", "ice-VI", "liquid"]
+P = 632.4e6
+T = 273.31
+status = "reference triple-point coordinate used to constrain the Gibbs representations"
+source = "Table 5; coordinate from Wagner et al. 2011"
+
+[[triple_points]]
+phases = ["ice-VI", "ice-VII", "liquid"]
+P = 2.2e9
+T = 353.5
+status = "estimated by Journaux et al. 2020 using the SeaFreeze ice-VI representation with the Wagner et al. 2011 ice-VII melting parameterization"
+source = "Section 3.2.3"
+
+[boundaries]
+implemented_in = "SeaFreeze"
+repository = "https://github.com/Bjournaux/SeaFreeze/tree/master"
+published_version = "0.9.2"
+reported_solid_solid = ["ice-Ih--ice-II", "ice-Ih--ice-III", "ice-II--ice-III", "ice-II--ice-V", "ice-II--ice-VI", "ice-III--ice-V", "ice-V--ice-VI"]
+min_reported_temperature = 130.0
+notes = "The paper reports/refines these boundaries from equal-Gibbs-energy surfaces but does not tabulate closed analytical boundary equations. Curves are therefore referenced to the SeaFreeze implementation rather than digitized from figures."
+
+[other]
+notes = "The ice-VI--ice-VII--liquid point is an estimate involving an external ice-VII melting representation; ice VII was not part of published SeaFreeze v0.9.2."

@@ -1,0 +1,20 @@
+unique_id = "oganov2004"
+
+[science]
+material = "magnesium metasilicate"
+formula = "MgSiO3"
+phase = ["bridgmanite", "post-perovskite"]
+physical_state = "solid"
+method = "GGA DFT and density-functional perturbation theory"
+
+[boundary]
+low_pressure_phase = "bridgmanite"
+high_pressure_phase = "post-perovskite"
+equation = "P = P_0K + slope * T"
+P_0K = 98.7e9
+slope = 9.56e6
+status = "reported theoretical GGA phase boundary"
+source_location = "Fig. 2 and text, p. 446"
+
+[other]
+notes = "The GGA static transition pressure is 98.7 GPa and the calculated Clapeyron slope is 9.56 MPa/K. This gives ~127 GPa at 3000 K, as stated in the paper. The alternate LDA result (83.7 GPa static transition pressure; 9.85 MPa/K slope) is reported by the authors but omitted as a secondary theoretical alternative."

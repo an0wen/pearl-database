@@ -1,0 +1,38 @@
+unique_id = "ono2005"
+
+[science]
+material = "magnesium metasilicate"
+formula = "MgSiO3"
+phase = ["bridgmanite", "post-perovskite"]
+physical_state = "solid"
+method = "laser-heated diamond anvil cell with in situ synchrotron X-ray diffraction"
+
+[boundary]
+low_pressure_phase = "bridgmanite"
+high_pressure_phase = "post-perovskite"
+equation = "P = P_ref + slope * (T - T_ref)"
+P_ref = 130e9
+dP_ref = 3e9
+T_ref = 2500.0
+slope = 7.0e6
+dslope = 3.0e6
+pressure_scale = "Pt, Holmes et al. (1989), paper ref. 47"
+status = "reported experimental phase boundary"
+
+[data]
+file = "ono2005_mgsio3_phase_stability.dat"
+raw_file = "ono2005_mgsio3_phase_stability_raw.dat"
+conversion_script = "ono2005_mgsio3_phase_stability.py"
+source_location = "Table 4 and Fig. 4, pp. 920-921"
+status = "reported experimental phase-stability points; manually transcribed and converted to SI"
+point_count = 42
+
+[validity]
+range_type = "reported Table 4 point extrema"
+min_p = 112.5e9
+max_p = 133.3e9
+min_t = 1510.0
+max_t = 3350.0
+
+[other]
+notes = "Only the pure MgSiO3 boundary is curated. The separate KLB-1 peridotite boundary is intentionally excluded. Table 6 also lists an alternate recalibration using the Jamieson et al. Pt scale (a=126 GPa, b=6.7 MPa/K); this is not stored as a separate preferred boundary because the paper's primary Eq. in Section 3.1 uses the Holmes et al. Pt scale."

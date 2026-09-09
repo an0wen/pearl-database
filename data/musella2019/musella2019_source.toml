@@ -1,0 +1,18 @@
+unique_id = "musella2019"
+citation = "Musella et al. 2019"
+date = "2019-02-25"
+year = 2019
+title = "Physical properties of MgO at deep planetary conditions"
+authors = ["R. Musella", "S. Mazevet", "F. Guyot"]
+journal = "Physical Review B"
+volume = 99
+article = "064110"
+doi = "https://doi.org/10.1103/PhysRevB.99.064110"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-08-31"
+
+[other]
+notes = "Published by APS on 2019-02-25. The peer-reviewed Physical Review B PDF supplied by the curator was used as the primary scientific source for this revised curation. The supplied MAGRATHEA EOS catalogue/code was used only as an implementation cross-check."

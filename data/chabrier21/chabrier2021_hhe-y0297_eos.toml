@@ -1,0 +1,27 @@
+unique_id = "chabrier2021"
+
+[science]
+material = "hydrogen-helium mixture"
+formula = "H-He"
+phase = "Y=0.297"
+physical_state = "fluid/plasma"
+method = "tabulated H/He EOS including non-ideal H-He interaction correction"
+
+[composition]
+helium_mass_fraction = 0.297
+
+[description]
+type = "tabulated"
+thermal_exist = true
+representation = "author-distributed EOS tables"
+recommended_application = "brown dwarfs and giant planets where H-He interaction effects are important"
+
+[software]
+official_directory = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/"
+
+[tables]
+tp = "TABLEEOS_2021_TP_Y0297_v1"
+trho = "TABLEEOS_2021_Trho_Y0297_v1"
+
+[other]
+notes = "Effective helium fraction Y=0.297 = 0.280 + 0.017, used in solar-composition evolutionary calculations. Chabrier & Debras (2021) caution that the interaction correction is constrained primarily by Militzer & Hubbard (2013) calculations near Y=0.245. In the stellar regime, the authors recommend the 2019 additive-volume-law EOS instead to avoid unnecessary spline-related numerical issues."

@@ -1,0 +1,22 @@
+unique_id = "miozzi2018"
+
+[science]
+material = "silicon carbide"
+formula = "SiC"
+method = "laser-heated DAC synchrotron XRD; compression/decompression bracketing and phase coexistence"
+
+[[boundaries]]
+phase_low = "B3 zinc blende"
+phase_high = "B1 rock salt"
+transition_type = "solid-solid"
+reference_temperature = 300.0
+transition_pressure = 66e9
+dtransition_pressure = 2e9
+dP_dT = -1e6
+dP_dT_status = "author reports magnitude 0.001 GPa/K and describes the Clapeyron slope as negative"
+high_temperature_pressure_min = 65e9
+high_temperature_pressure_max = 70e9
+notes = "Room-temperature transition reported as 66 ± 2 GPa; high-temperature transition bracketed between 65 and 70 GPa. No uncertainty on the Clapeyron slope magnitude is reported."
+
+[other]
+notes = "Only the directly reported B3-B1 SiC boundary is curated. The broader Si-C binary melting relations involve nonstoichiometric starting compositions and are not promoted to a stoichiometric SiC melting boundary."
