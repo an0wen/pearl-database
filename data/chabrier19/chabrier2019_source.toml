@@ -1,0 +1,24 @@
+unique_id = "chabrier2019"
+citation = "Chabrier et al. 2019"
+date = "2019-02-08"
+year = 2019
+title = "A New Equation of State for Dense Hydrogen–Helium Mixtures"
+authors = ["Gilles Chabrier", "Stéphane Mazevet", "Florian Debras"]
+journal = "The Astrophysical Journal"
+volume = 872
+article = "51"
+doi = "https://doi.org/10.3847/1538-4357/aaf99f"
+
+[logistics]
+ingested_by = "David R. Rice"
+ingested_when = "2026-08-31"
+last_updated = "2026-10-02"
+last_updated_by = "Artyom Aguichine"
+
+[software]
+official_directory = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/"
+official_archive = "https://perso.ens-lyon.fr/gilles.chabrier/DirEOS/DirEOS2019.tar.gz"
+table_release = "June 2021 v1"
+
+[other]
+notes = ""
