@@ -1,9 +1,0 @@
-# This is a template for a source file containing metadata about a publication that provides experimental/computational
-# data or EoS parameters for a given material.
-# unique_id should be a short identifier for the source, e.g. "miozzi2020", which is used to link this source metadata
-# to the corresponding EOS metadata in template_eos.toml and any thermo metadata in template_thermo.toml.
-
-unique_id = "template2026"  # Unique identifier as defined in the *_source.toml, e.g. "miozzi2020"
-citation = ""  # Full citation for the source of the EOS as it would appear in author-year format, e.g. "Miozzi et al. (2020)"
-year = 2026  # Publication year of the source, e.g. 2020
-doi=""  # DOI for the source of the EOS, e.g. "https://doi.org/10.1234/example.doi" (must start with https://doi.org/)

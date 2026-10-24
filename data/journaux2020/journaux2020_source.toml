@@ -6,7 +6,7 @@ title = "Holistic Approach for Studying Planetary Hydrospheres: Gibbs Representa
 authors = ["Baptiste Journaux", "J. Michael Brown", "Anna Pakhomova", "Ian E. Collings", "Sylvain Petitgirard", "P. Espinoza", "Tiziana Boffa Ballaran", "Steven D. Vance", "J. Ott", "F. Cova", "G. Garbarino", "M. Hanfland"]
 journal = "Journal of Geophysical Research: Planets"
 volume = 125
-article = "e2019JE006176"
+article_number = "e2019JE006176"
 doi = "https://doi.org/10.1029/2019JE006176"
 
 [logistics]

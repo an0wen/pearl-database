@@ -6,7 +6,7 @@ title = "Physical properties of MgO at deep planetary conditions"
 authors = ["R. Musella", "S. Mazevet", "F. Guyot"]
 journal = "Physical Review B"
 volume = 99
-article = "064110"
+article_number = "064110"
 doi = "https://doi.org/10.1103/PhysRevB.99.064110"
 
 [logistics]

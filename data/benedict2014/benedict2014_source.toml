@@ -6,7 +6,7 @@ title = "Multiphase equation of state for carbon addressing high pressures and t
 authors = ["Lorin X. Benedict", "Kevin P. Driver", "Sebastien Hamel", "Burkhard Militzer", "Tingting Qi", "Alfredo A. Correa", "A. Saul", "Eric Schwegler"]
 journal = "Physical Review B"
 volume = 89
-article = "224109"
+article_number = "224109"
 doi = "https://doi.org/10.1103/PhysRevB.89.224109"
 
 [logistics]

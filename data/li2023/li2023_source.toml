@@ -17,7 +17,6 @@ volume = 128
 issue = 10
 article_number = "e2023JB026774"
 doi = "https://doi.org/10.1029/2023JB026774"
-dataset_doi = "https://doi.org/10.5281/zenodo.8188349"
 dataset_version = "2"
 received = 2023-03-21
 accepted = 2023-10-08
@@ -34,6 +33,9 @@ bibtex = """
   doi = {10.1029/2023JB026774}
 }
 """
+
+[zenodo]
+doi = "https://doi.org/10.5281/zenodo.8188349"
 
 [logistics]
 ingested_by = "David R. Rice"
