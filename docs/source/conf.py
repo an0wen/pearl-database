@@ -79,3 +79,11 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+
+# Rebuild the field reference from the same schemas used for contributor templates.
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+from generate_schema_docs import generate as generate_schema_reference
+
+
+def setup(app):
+    app.connect('builder-inited', lambda app: generate_schema_reference())
