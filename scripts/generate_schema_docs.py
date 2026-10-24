@@ -16,7 +16,7 @@ def generate(output=OUTPUT):
              'These tables describe source, EOS, and thermo metadata TOML files.',
              'Values shown are examples, not defaults.','',
              'Required means the field must be present. We try to keep a minimum number of required fields to encourage new entries, and update later if necessary.', '',
-             'You can run `python scripts/check_schema_coverage.py` to verify that all entries existing in the database are covered by the schemas described below.', '',
+             'You can run ``python scripts/check_schema_coverage.py`` to verify that all entries existing in the database are covered by the schemas described below.', '',
              '.. contents:: On this page', '   :local:', '   :depth: 2', '']
     for kind, schema in load_schemas().items():
         title = schema['title']
