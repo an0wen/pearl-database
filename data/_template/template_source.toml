@@ -1,0 +1,56 @@
+# Generated from schemas/source.toml; do not edit directly.
+# Values are examples, not automatic defaults.
+# Bibliographic metadata for one publication.
+
+unique_id = "template2026"  # Source identifier linking source, EOS, and thermo files. | Unit: — | Required: yes
+citation = "Author et al. (2026)"  # Author-year citation for the publication. | Unit: — | Required: yes
+year = 2026  # Publication year. | Unit: — | Required: yes
+date = "2026-10-23"  # Publication date. | Unit: — | Required: no
+title = "Equation of state of H2O"  # Title of the publication. | Unit: — | Required: yes
+authors = "Equation of state of H2O"  # List of authors. | Unit: — | Required: no
+journal = "The Astrophysical Journal"  # Journal name. | Unit: — | Required: no
+volume = 123  # Volume number. | Unit: — | Required: no
+issue = 12  # Issue number. | Unit: — | Required: no
+article_number = ""  # Article number. | Unit: — | Required: no
+pages = ""  # Page numbers. | Unit: — | Required: no
+bibcode = ""  # Article number. | Unit: — | Required: no
+doi = "https://doi.org/10.1234/example"  # Publication DOI URL beginning with https://doi.org/. | Unit: — | Required: yes
+publisher_url = ""  # Link to the article from publisher. | Unit: — | Required: no
+supplement_url = ""  # Link to the supplemental material from the publisher. | Unit: — | Required: no
+ads = ""  # Link to the ADS entry. | Unit: — | Required: no
+scix = ""  # Link to the Science Explorer entry (scixplorer.org). | Unit: — | Required: no
+dataset_version = ""  # Dataset version. | Unit: — | Required: no
+received = ""  # Date the paper was received. | Unit: — | Required: no
+accepted = ""  # Date the paper was accepted. | Unit: — | Required: no
+pmid = ""  # PubMed Identifier. | Unit: — | Required: no
+bibtex = ""  # Bibtex entry. | Unit: — | Required: no
+
+[zenodo]
+doi = ""  # DOI of the Zenodo repository. | Unit: — | Required: no
+link = ""  # Link of the Zenodo repository. | Unit: — | Required: no
+record = ""  # Zenodo record number. | Unit: — | Required: no
+description = ""  # Zenodo description. | Unit: — | Required: no
+
+[github]
+link = ""  # Link of the github repository. | Unit: — | Required: no
+author = ""  # Username of the github repository. | Unit: — | Required: no
+
+[authorsource]
+official_directory = ""  # Author provided link to source of ressource. | Unit: — | Required: no
+official_archive = ""  # Author provided link to ressource. | Unit: — | Required: no
+table_release = ""  # Version of author-provided release. | Unit: — | Required: no
+
+[logistics]
+ingested_by = ""  # Collaborator who made the pull request to add the entry to the database. | Unit: — | Required: no
+reviewed_by = ""  # Collaborator who reviewed and accepted the pull request. | Unit: — | Required: no
+ingested_when = ""  # Date when the entry was added to the database (date of accepted PR). | Unit: — | Required: no
+last_updated = ""  # Date when the entry was last updated. | Unit: — | Required: no
+
+[files]
+raw_supplement = ""  # List of raw files. | Unit: — | Required: no
+raw_supplement_sha256 = ""  # SHA of raw files. | Unit: — | Required: no
+
+[external_data]
+supplementary_file = ""  # Supplementary files. | Unit: — | Required: no
+supplementary_table = ""  # Supplementary tables. | Unit: — | Required: no
+supplementary_table_description = ""  # Description of supplementary files. | Unit: — | Required: no

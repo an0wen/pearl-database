@@ -1,0 +1,35 @@
+# Generated from schemas/eos.toml; do not edit directly.
+# Values are examples, not automatic defaults.
+# Metadata and model parameters for one equation of state.
+
+unique_id = "template2026"  # Source identifier linking source, EOS, and thermo files. | Unit: — | Required: yes
+
+[science]
+material = "iron"  # Material name. | Unit: — | Required: yes
+alt_name = ["metallic iron"]  # Alternative material names. | Unit: — | Required: no
+formula = "Fe"  # Chemical formula. | Unit: — | Required: yes
+phase = "solid"  # Material phase designation. | Unit: — | Required: yes
+crystal = "hcp"  # Crystal structure. | Unit: — | Required: no
+method = "DAC"  # Experimental or computational method. | Unit: — | Required: no
+physical_state = "solid"  # Physical state of the material. | Unit: — | Required: no
+
+[description]
+type = "fit"  # EOS representation, for example fit or tabulated. | Unit: — | Required: yes
+cold_type = "bm3"  # Isothermal EOS model. | Unit: — | Required: no
+thermal_exist = true  # Whether the EOS includes a thermal component. | Unit: — | Required: yes
+thermal_type = "debye"  # Thermal model; applicable when thermal_exist is true. | Unit: — | Required: no
+reference_temperature = 300.0  # Reference temperature of the cold curve. | Unit: K | Required: no
+
+[validity]
+min_p = 10000000000.0  # Minimum pressure of the EOS validity range. | Unit: Pa | Required: no
+max_p = 20000000000.0  # Maximum pressure of the EOS validity range. | Unit: Pa | Required: no
+min_t = 300.0  # Minimum temperature of the EOS validity range. | Unit: K | Required: no
+max_t = 600.0  # Maximum temperature of the EOS validity range. | Unit: K | Required: no
+min_rho = 8000.0  # Minimum density of the EOS validity range. | Unit: kg/m^3 | Required: no
+max_rho = 16000.0  # Maximum density of the EOS validity range. | Unit: kg/m^3 | Required: no
+
+[other]
+notes = ""  # Additional usage notes; the publication remains the primary model description. | Unit: — | Required: no
+
+[parameters]
+# Model-specific EOS and thermal parameters. Prefix uncertainties with d, for example dV_0. Parameter names and units must be documented for the chosen model.
