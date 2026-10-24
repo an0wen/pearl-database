@@ -31,6 +31,11 @@ To add more data, we recommend using the following workflow.
 Start by forking this repository to make a copy in your github account.
 
 ### Template
+
+The contributor templates and data-format documentation are generated from shared
+schemas. See [schemas/README.md](schemas/README.md) for editing, regeneration,
+and checking which data fields still need schema definitions.
+
 In the `data` folder, create a new folder for every source you want to add. We recommend use `data/_template` as a template.
 
 ### Contents
