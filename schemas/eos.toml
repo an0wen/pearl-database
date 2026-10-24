@@ -1,0 +1,151 @@
+# Canonical field definitions. Edit here, then regenerate templates and documentation.
+# References use schema_name:section.field; local attributes override referenced ones.
+title = "EOS"
+template_file = "template_label_eos.toml"
+description = "Metadata and model parameters for one equation of state."
+
+[sections.parameters]
+description = "Model-specific EOS and thermal parameters. Prefix uncertainties with d, for example dV_0. Parameter names and units must be documented for the chosen model."
+
+[fields."unique_id"]
+ref = "source:unique_id"
+
+[fields."science.material"]
+type = "string"
+description = "Material name."
+unit = "—"
+required = true
+example = "iron"
+allow_list = true
+
+[fields."science.alt_name"]
+type = "string"
+description = "Alternative material names."
+unit = "—"
+required = false
+example = ["metallic iron"]
+allow_list = true
+
+[fields."science.formula"]
+type = "string"
+description = "Chemical formula."
+unit = "—"
+required = true
+example = "Fe"
+allow_list = true
+
+[fields."science.phase"]
+type = "string"
+description = "Material phase designation."
+unit = "—"
+required = true
+example = "solid"
+allow_list = true
+
+[fields."science.crystal"]
+type = "string"
+description = "Crystal structure."
+unit = "—"
+required = false
+example = "hcp"
+allow_list = true
+
+[fields."science.method"]
+type = "string"
+description = "Experimental or computational method."
+unit = "—"
+required = false
+example = "DAC"
+allow_list = true
+
+[fields."science.physical_state"]
+type = "string"
+description = "Physical state of the material."
+unit = "—"
+required = false
+example = "solid"
+allow_list = true
+
+[fields."description.type"]
+type = "string"
+description = "EOS representation, for example fit or tabulated."
+unit = "—"
+required = true
+example = "fit"
+
+[fields."description.cold_type"]
+type = "string"
+description = "Isothermal EOS model."
+unit = "—"
+required = false
+example = "bm3"
+
+[fields."description.thermal_exist"]
+type = "boolean"
+description = "Whether the EOS includes a thermal component."
+unit = "—"
+required = true
+example = true
+
+[fields."description.thermal_type"]
+type = "string"
+description = "Thermal model; applicable when thermal_exist is true."
+unit = "—"
+required = false
+example = "debye"
+
+[fields."description.reference_temperature"]
+type = "float"
+description = "Reference temperature of the cold curve."
+unit = "K"
+required = false
+example = 300.0
+
+[fields."validity.min_p"]
+type = "float"
+description = "Minimum pressure of the EOS validity range."
+unit = "Pa"
+required = false
+example = 10000000000.0
+
+[fields."validity.max_p"]
+type = "float"
+description = "Maximum pressure of the EOS validity range."
+unit = "Pa"
+required = false
+example = 20000000000.0
+
+[fields."validity.min_t"]
+type = "float"
+description = "Minimum temperature of the EOS validity range."
+unit = "K"
+required = false
+example = 300.0
+
+[fields."validity.max_t"]
+type = "float"
+description = "Maximum temperature of the EOS validity range."
+unit = "K"
+required = false
+example = 600.0
+
+[fields."validity.min_rho"]
+type = "float"
+description = "Minimum density of the EOS validity range."
+unit = "kg/m^3"
+required = false
+example = 8000.0
+
+[fields."validity.max_rho"]
+type = "float"
+description = "Maximum density of the EOS validity range."
+unit = "kg/m^3"
+required = false
+example = 16000.0
+
+[fields."other.notes"]
+type = "string"
+description = "Additional usage notes; the publication remains the primary model description."
+unit = "—"
+required = false
+example = ""
