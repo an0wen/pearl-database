@@ -40,12 +40,10 @@ will be reported until their definitions are reviewed and added. No wildcard
 sections silently suppress these reports. The empty EOS `parameters` section
 has guidance but does not declare arbitrary parameter names as known fields.
 
-Running `python tests/test_schemas.py` executes the tool tests and then scans the
-actual repository data, printing undefined fields and returning a nonzero status
-for coverage gaps or parse errors. To run only the isolated tool tests, use
-`python -m unittest discover -s tests -p test_schemas.py`.
+Run `python tests/test_schemas.py` to test the schema tools using temporary
+fixtures. It does not scan repository data. Add `--verbose` for detailed unittest
+results, or use `python -m unittest discover -s tests -p test_schemas.py`.
 
+Run `python scripts/check_schema_coverage.py` to check actual repository data.
 Select one metadata kind with `--kind source`, `--kind eos`, or `--kind thermo`.
-Both `scripts/check_schema_coverage.py` and `tests/test_schemas.py` accept this
-option. Omitting it (or passing `--kind all`) checks all three. In the test script,
-the selection applies to the actual-data scan; tool unit tests still all run.
+Omitting the option (or passing `--kind all`) checks all three.

@@ -1,8 +1,7 @@
-"""Run directly to test the schema tools AND report actual database coverage.
+"""Test schema tools using temporary fixtures, without scanning repository data.
 
-For isolated tool tests only: python -m unittest discover -s tests -p test_schemas.py.
+Run with python tests/test_schemas.py (optionally --verbose).
 """
-import argparse
 import contextlib
 import io
 from pathlib import Path
@@ -13,7 +12,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from schema_utils import ROOT, load_schemas
+from schema_utils import load_schemas
 from generate_templates import generate
 from generate_schema_docs import generate as generate_docs
 from check_schema_coverage import check
@@ -115,11 +114,4 @@ class SchemaTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument('--kind', choices=('all', 'source', 'eos', 'thermo'), default='all',
-                        help='Metadata kind to check (default: all).')
-    selection, unittest_args = parser.parse_known_args()
-    result = unittest.main(argv=[sys.argv[0], *unittest_args], exit=False).result
-    print('\nChecking actual database fields against the schemas:', flush=True)
-    coverage_status = check(ROOT / 'data', kind=selection.kind)
-    raise SystemExit(coverage_status or int(not result.wasSuccessful()))
+    unittest.main()
