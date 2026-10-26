@@ -4,7 +4,7 @@ unique_id = "attia2026"
 material = "iron"
 formula = "Fe"
 phase = ["alpha-bcc", "delta-bcc", "gamma-fcc", "epsilon-hcp", "liquid"]
-crystal = "bcc, fcc, hcp"
+crystal = ["bcc", "fcc", "hcp"]
 method = ["experimental compilation", "DFT", "AIMD", "tabulated"]
 
 [description]
