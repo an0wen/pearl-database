@@ -1,0 +1,22 @@
+unique_id = "cozza2026"
+citation = "Cozza et al. 2026"
+year = 2026
+title = "Denser hydrogen inferred from first-principles simulations challenges Jupiter’s interior models"
+authors = ["Cesare Cozza", "Kousuke Nakano", "Saburo Howard", "Hao Xie", "Ravit Helled", "Guglielmo Mazzola"]
+journal = "Physical Review Research"
+volume = 8
+number = 1
+doi="https://doi.org/10.1103/yrk6-ryps"
+
+
+[logistics]
+ingested_by = "Emily Sandford"
+ingested_when = "2026-10-26"
+last_updated = "2026-10-26"
+
+[github]
+link = "https://github.com/cisar97/H_SCANvv10_EoS"
+author = "cisar97"
+
+[other]
+notes = "2026 EOS for hydrogen, tabulated over a regular grid in temperature and pressure. Built from SCVH at low pressures, new first-principles simulations at intermediate pressures, CMS19 at high pressures; interpolation between these regimes is done with the interpolation scheme from Xie, Howard, and Mazzola 2025."

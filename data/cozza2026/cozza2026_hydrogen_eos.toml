@@ -1,0 +1,30 @@
+unique_id = "cozza2026"
+
+[science]
+material = "hydrogen"  # Material name, e.g. "iron"
+formula = "H"  # Chemical formula, e.g. "Fe"
+phase = "fluid/plasma"
+physical_state = "fluid/plasma"
+method = "wide-range composite tabulated EOS"
+
+[description]
+type = "tabulated" # Type of EOS, e.g. "fit" or "tabulated"
+thermal_exist = true  # True if the EOS includes a thermal component, false if it is purely isothermal
+representation = "author-distributed EOS tables"
+
+[validity]
+min_p = 1e5  # Pa
+max_p = 10695e9  # Pa
+min_t = 150  # K
+max_t = 50000  # K
+
+[tables]
+tp = "H_SCANvv10_EOS"
+tp_MD = "H_SCANvv10_MD" 
+
+[github]
+link = "https://github.com/cisar97/H_SCANvv10_EoS"
+author = "cisar97"
+
+[other]
+notes = "H_SCANvv10_EOS contains the EOS built from SCVH, Cozza et al. 2026 first-principles simulations, and CMS19. H_SCANvv10_MD contains only the Cozza et al. 2026 first-principles results, which cover only a subset of the TP parameter space spanned by the full EOS."

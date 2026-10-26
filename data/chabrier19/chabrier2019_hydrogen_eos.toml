@@ -20,4 +20,4 @@ tp = "TABLE_H_TP_v1"
 trho = "TABLE_H_Trho_v1"
 
 [other]
-notes = "Pure-hydrogen EOS from Chabrier, Mazevet & Soubiran (2019). Use the author-distributed tables directly."
+notes = "Pure-hydrogen EOS from Chabrier, Mazevet & Soubiran (2019). Use the author-distributed tables directly. Please note: columns 1-5 are numerically inconsistent with columns 6-10 (see Sandford & Miguel 2026, appendix A)."
