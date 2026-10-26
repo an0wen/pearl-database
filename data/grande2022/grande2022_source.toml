@@ -24,11 +24,13 @@ doi = "https://doi.org/10.1103/PhysRevB.105.104109"
 ads = "https://ui.adsabs.harvard.edu/abs/2022PhRvB.105j4109G/abstract"
 bibcode = "2022PhRvB.105j4109G"
 publisher_url = "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.104109"
-zenodo = "https://doi.org/10.5281/zenodo.6339621"
+
+[zenodo]
+doi = "https://doi.org/10.5281/zenodo.6339621"
+record = "6339621"
+description = "Raw XRD patterns for ice and Au, key correlating patterns, and calibration files."
 
 [external_data]
-zenodo_record = "6339621"
-zenodo_description = "Raw XRD patterns for ice and Au, key correlating patterns, and calibration files."
 supplementary_file = "SI_Grande_2022.pdf"
 supplementary_table = "Table 4, pp. 19-24"
 supplementary_table_description = "All pressure-volume data used for the EOS fitting."

@@ -1,0 +1,294 @@
+# Canonical field definitions. Edit here, then regenerate templates and documentation.
+# References use schema_name:section.field; local attributes override referenced ones.
+title = "Source"
+template_file = "template_source.toml"
+description = "Bibliographic metadata for one publication."
+
+[fields."unique_id"]
+type = "string"
+description = "Source identifier linking source, EOS, and thermo files."
+unit = "—"
+required = true
+example = "template2026"
+
+[fields."citation"]
+type = "string"
+description = "Author-year citation for the publication."
+unit = "—"
+required = true
+example = "Author et al. (2026)"
+
+[fields."year"]
+type = "integer"
+description = "Publication year."
+unit = "—"
+required = true
+example = 2026
+
+[fields."date"]
+type = "string"
+description = "Publication date."
+unit = "—"
+required = false
+example = "2026-10-23"
+
+[fields."title"]
+type = "string"
+description = "Title of the publication."
+unit = "—"
+required = true
+example = "Equation of state of H2O"
+
+[fields."authors"]
+type = "string"
+description = "List of authors."
+unit = "—"
+required = false
+example = ["Andréa Dupont","Camille Dupond"]
+
+[fields."journal"]
+type = "string"
+description = "Journal name."
+unit = "—"
+required = false
+example = "The Astrophysical Journal"
+
+[fields."volume"]
+type = "float"
+description = "Volume number."
+unit = "—"
+required = false
+example = 123
+
+[fields."issue"]
+type = "float"
+description = "Issue number."
+unit = "—"
+required = false
+example = 12
+
+[fields."article_number"]
+type = "string"
+description = "Article number."
+unit = "—"
+required = false
+example = ""
+
+[fields."pages"]
+type = "string"
+description = "Page numbers."
+unit = "—"
+required = false
+example = ""
+
+[fields."bibcode"]
+type = "string"
+description = "Article number."
+unit = "—"
+required = false
+example = ""
+
+[fields."doi"]
+type = "string"
+description = "Publication DOI URL beginning with https://doi.org/."
+unit = "—"
+required = true
+example = "https://doi.org/10.1234/example"
+format = "doi-url"
+
+[fields."publisher_url"]
+type = "string"
+description = "Link to the article from publisher."
+unit = "—"
+required = false
+example = ""
+
+[fields."supplement_url"]
+type = "string"
+description = "Link to the supplemental material from the publisher."
+unit = "—"
+required = false
+example = ""
+
+[fields."ads"]
+type = "string"
+description = "Link to the ADS entry."
+unit = "—"
+required = false
+example = ""
+
+[fields."scix"]
+type = "string"
+description = "Link to the Science Explorer entry (scixplorer.org)."
+unit = "—"
+required = false
+example = ""
+
+[fields."dataset_version"]
+type = "string"
+description = "Dataset version."
+unit = "—"
+required = false
+example = ""
+
+[fields."received"]
+type = "string"
+description = "Date the paper was received."
+unit = "—"
+required = false
+example = ""
+
+[fields."accepted"]
+type = "string"
+description = "Date the paper was accepted."
+unit = "—"
+required = false
+example = ""
+
+[fields."pmid"]
+type = "string"
+description = "PubMed Identifier."
+unit = "—"
+required = false
+example = ""
+
+[fields."bibtex"]
+type = "string"
+description = "Bibtex entry."
+unit = "—"
+required = false
+example = ""
+
+[fields."zenodo.doi"]
+type = "string"
+description = "DOI of the Zenodo repository."
+unit = "—"
+required = false
+example = ""
+
+[fields."zenodo.link"]
+type = "string"
+description = "Link of the Zenodo repository."
+unit = "—"
+required = false
+example = ""
+
+[fields."zenodo.record"]
+type = "string"
+description = "Zenodo record number."
+unit = "—"
+required = false
+example = ""
+
+[fields."zenodo.description"]
+type = "string"
+description = "Zenodo description."
+unit = "—"
+required = false
+example = ""
+
+[fields."github.link"]
+type = "string"
+description = "Link of the github repository."
+unit = "—"
+required = false
+example = ""
+
+[fields."github.author"]
+type = "string"
+description = "Username of the github repository."
+unit = "—"
+required = false
+example = ""
+
+[fields."authorsource.official_directory"]
+type = "string"
+description = "Author provided link to source of ressource."
+unit = "—"
+required = false
+example = ""
+
+[fields."authorsource.official_archive"]
+type = "string"
+description = "Author provided link to ressource."
+unit = "—"
+required = false
+example = ""
+
+[fields."authorsource.table_release"]
+type = "string"
+description = "Version of author-provided release."
+unit = "—"
+required = false
+example = ""
+
+[fields."logistics.ingested_by"]
+type = "string"
+description = "Collaborator who made the pull request to add the entry to the database."
+unit = "—"
+required = false
+example = ""
+
+[fields."logistics.reviewed_by"]
+type = "string"
+description = "Collaborator who reviewed and accepted the pull request."
+unit = "—"
+required = false
+example = ""
+
+[fields."logistics.ingested_when"]
+type = "string"
+description = "Date when the entry was added to the database (date of accepted PR)."
+unit = "—"
+required = false
+example = ""
+
+[fields."logistics.last_updated"]
+type = "string"
+description = "Date when the entry was last updated."
+unit = "—"
+required = false
+example = ""
+
+[fields."files.raw_supplement"]
+type = "string"
+description = "List of raw files."
+unit = "—"
+required = false
+example = ""
+
+[fields."files.raw_supplement_sha256"]
+type = "string"
+description = "SHA of raw files."
+unit = "—"
+required = false
+example = ""
+
+[fields."external_data.supplementary_file"]
+type = "string"
+description = "Supplementary files."
+unit = "—"
+required = false
+example = ""
+
+[fields."external_data.supplementary_table"]
+type = "string"
+description = "Supplementary tables."
+unit = "—"
+required = false
+example = ""
+
+[fields."external_data.supplementary_table_description"]
+type = "string"
+description = "Description of supplementary files."
+unit = "—"
+required = false
+example = ""
+
+[fields."other.notes"]
+type = "string"
+description = "Additional notes about this publication."
+unit = "—"
+required = false
+example = ""
+template = false

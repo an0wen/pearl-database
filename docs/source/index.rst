@@ -25,6 +25,12 @@ search, manipulate, plot, and export the database contents.
    getting_started/repository_structure
    getting_started/dependencies   
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Data format
+
+   data_format/reference
+
 .. User Guide pages will be added later.
    .. toctree::
       :maxdepth: 2

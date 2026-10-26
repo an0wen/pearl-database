@@ -1,7 +1,7 @@
-modules/__pycache__/
+*__pycache__/
 output/*
 .ipynb_checkpoints/
-.DS_Store
+*.DS_Store
 .venv-run/
 
 # Documentation

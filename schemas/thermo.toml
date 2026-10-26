@@ -1,0 +1,76 @@
+# Canonical field definitions. Edit here, then regenerate templates and documentation.
+# References use schema_name:section.field; local attributes override referenced ones.
+title = "Thermo"
+template_file = "template_label_thermo.toml"
+description = "Metadata for an accompanying *_thermo.dat thermodynamic table."
+
+[fields."unique_id"]
+ref = "source:unique_id"
+
+[fields."science.material"]
+ref = "eos:science.material"
+
+[fields."science.alt_name"]
+ref = "eos:science.alt_name"
+
+[fields."science.formula"]
+ref = "eos:science.formula"
+
+[fields."science.phase"]
+ref = "eos:science.phase"
+
+[fields."science.crystal"]
+ref = "eos:science.crystal"
+
+[fields."science.method"]
+ref = "eos:science.method"
+
+[fields."science.physical_state"]
+ref = "eos:science.physical_state"
+
+[fields."validity.min_p"]
+ref = "eos:validity.min_p"
+description = "Minimum pressure of the thermodynamic dataset."
+
+[fields."validity.max_p"]
+ref = "eos:validity.max_p"
+description = "Maximum pressure of the thermodynamic dataset."
+
+[fields."validity.min_t"]
+ref = "eos:validity.min_t"
+description = "Minimum temperature of the thermodynamic dataset."
+
+[fields."validity.max_t"]
+ref = "eos:validity.max_t"
+description = "Maximum temperature of the thermodynamic dataset."
+
+[fields."validity.min_rho"]
+ref = "eos:validity.min_rho"
+description = "Minimum density of the thermodynamic dataset."
+
+[fields."validity.max_rho"]
+ref = "eos:validity.max_rho"
+description = "Maximum density of the thermodynamic dataset."
+
+[fields."other.notes"]
+type = "string"
+description = "Additional notes about the thermodynamic dataset."
+unit = "—"
+required = false
+example = ""
+
+[fields."data.delimiter"]
+type = "string"
+description = "Separator regular expression used to read the accompanying thermo.dat file."
+unit = "—"
+required = false
+example = "\\s+"
+template = false
+
+[fields."data.file"]
+type = "string"
+description = "Filename of the accompanying standardized thermodynamic table."
+unit = "—"
+required = false
+example = "template2026_label_thermo.dat"
+template = false
