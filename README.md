@@ -1,21 +1,30 @@
 # Thermodynamic database of material properties
 
-This repository is the backend of the thermodynamic database of material properties for planetary modelling. The frontend is our collaboration website, which you can find here: TBD.
+<img height="200" alt="PEARL_logo_Fran" src="https://github.com/user-attachments/assets/158d5053-e398-4e48-8a59-655de048b543" />
 
-The purpose of the database is to collect all thermodynamic properties of materials, as well as equations of state (EOS) that exist in the literature.
+This repository is the *backend* of the thermodynamic database of material properties for planetary modelling. The *frontend* is our collaboration website, which you can find here:
+1. PEARL website: [https://pearl-database-demo.onrender.com](https://pearl-database-demo.onrender.com)
+2. About PEARL: [https://pearl-database-demo.onrender.com/about/](https://pearl-database-demo.onrender.com/about/)
+3. PEARL's team: [https://pearl-database-demo.onrender.com/team/](https://pearl-database-demo.onrender.com/team/)
+
+The purpose of the database is to collect **thermodynamic properties of materials** and **equations of state (EOS)** that exist in the literature.
 
 This repository serves 3 purposes:
-- store the thermodynamic properties and equations of state (EOS) or materials that exist in the literature
+- store thermodynamic properties and equations of state (EOS)
 - provide users quick access to the available/existing data
-- create a structure that can easily be injected in our frontend website
+- create a structure that can easily be injected in our *frontend* website
 
-Since this repository is the backend for our website, this is not meant to be a user-friendly EOS navigation tool, but it can be used as such.
+Since this repository is the *backend* for our website, it has more advanced tools intended for more advanced users.
 
-# Who are we?
+# Contents of the repository
 
-We are a group of scientists with a wide range of expertise, all connected to the field of planetary science. You can learn more about us and our collaboration by visiting our website: TBD.
-
-We also welcome new collaborators.
+- [data](data/) contains the repository data.
+- [docs](docs/) contains the documentation: [https://an0wen.github.io/pearl-database/](https://an0wen.github.io/pearl-database/).
+- [modules](modules/) contains modules used to handle the contents of the database (in `data/`)
+- [output](output/) contains figures and tables generated using the modules
+- [schemas](schemas/) contains reference information on properties of entries
+- [scripts](scripts/) contains standalone scripts used to manipulate the data or perform checks
+- [tests](tests/) contains test scripts, useful when adding new entries to verify it is loaded as intended
 
 # How to use this database
 
@@ -24,62 +33,38 @@ We also welcome new collaborators.
 
 # How to add more data
 
-To add more data, we recommend using the following workflow.
+To add more data, we recommend using the following workflow:
 
-## Recommended workflow
-### Fork
-Start by forking this repository to make a copy in your github account.
+1. **Fork the repository**: it will create a copy of the repository on your github account.
+2. **Use the templates [data/_templates/](data/_templates/) to create a new entry**.
+    - One entry is one folder that corresponds to one peer-reviewed publication (at least accepted, preferably published).
+    - The name of the entry (folder), `[source_id]`, follows the author-year naming convention, with letters a, b, c etc. used when necessary.
+    - Each entry can contain as many thermodynamic tables and EOSs as necessary
+    - Add one `[source_id]_[thermo_label]_thermo.dat` and `[source_id]_[thermo_label]_thermo.toml` file per thermodynamic table. The `*_thermo.dat` file contains ascii tab-separated machine readable thermodynamic data. The `.toml` file contains metadata, i.e. information related to the thermodynamic data.
+    - Contributors are heavily encouraged to provide the raw thermodynamic data, as published by the original authors: `[source_id]_[thermo_label]_thermo_raw.*` (can be any format); and a python script `[source_id]_[thermo_label]_thermo.py` used to convert the raw data into database-readable files. These file will be ignored, but they greatly improve reproducibility.
+3. Once all entries are added, **run tests** to verify that new entries follow the required format:
+    ```
+    python tests/test_load.py
+    python tests/test_schemas.py
+    ```
+4. **Verify fields coverage** by running `python scripts/check_schema_coverage.py`. This verifies that all fields used in the database (including new entries) are defined in the [schemas](schemas/) (and hence the documentation and templates).
+    - If the output is empty, you can proceed.
+    - If the output is not empty, make sure that you intended to create new fields, otherwise try following the existing structure.
+5. **Push the changes** to your github repository.
+    - *If you are new to github*: remember that your computer and your github repo are not synced. You need to "push" your changes manually so they are uploaded on github.
+6. **Make the pull request (PR)**.
+    - *If you are new to github*: once you pushed the changes on your fork, github will detect that you are "ahead" of the database, and will propose to make a "pull request". This will send us a request to implement your changes. After review, the PR will be accepted so the new entries can be added.
+  
+If you don't have a github account, or are worried the learning curve is too steep: **contact us**, and we will be happy to assist you!
+You can contact us by using our [content request form](https://docs.google.com/forms/d/e/1FAIpQLSftstLjyRFI_QHUJcg1xsdBVSfIpkdVIdQBl1ou_xs0jy_R4Q/viewform?usp=header). Leaving your email adress will allow us to follow-up with your request and make it process faster.
 
-### Template
-
-The contributor templates and data-format documentation are generated from shared
-schemas. See [schemas/README.md](schemas/README.md) for editing, regeneration,
-and checking which data fields still need schema definitions.
-
-In the `data` folder, create a new folder for every source you want to add. We recommend use `data/_template` as a template.
-
-### Contents
-<b>Each source corresponds to one peer-reviewed scientific paper</b> with an author and a DOI. Add the `[source_id]_source.toml` file, containing bibliographic information about the source (paper). There should be only one source file per folder.
-
-<b>Add one `[source_id]_[eos_label]_eos.toml` file per EOS</b>. Each folder (source) can have as many EOS as needed.
-
-<b>Add one `[source_id]_[thermo_label]_thermo.dat` and `[source_id]_[thermo_label]_thermo.toml` file per thermodynamic table</b>. The `.dat` file contains ascii tab-separated machine readable thermodynamic data. The `.toml` file contains metadata, i.e. information related to the thermodynamic data. Each folder (source) can have as many EOS as needed.
-
-In addition to thermodynamic data, contributors are heavily encouraged to provide the raw thermodynamic data, as published by the original authors: `[source_id]_[thermo_label]_thermo_raw.dat`; and a python script `[source_id]_[thermo_label]_thermo.py` used to convert the raw data into database-readable files. These file will be ignored, but they greatly improve reproducibility.
-
-### Load test
-Once all the new content has been created, test your contribution by running:
-```
-python tests/test_load.py
-```
-
-This script verifies that:
-1. All modules are imported successfully
-2. All files/data are loaded successfully
-
-A successful output will look like:
-```
-Source code imported successfully.
-
-Loaded thermo-data file: data/solomatovacaracas2021/solomatovacaracas2021_pyrolite_thermo.dat
-Loaded thermo-data file: data/fischer2011/fischer2011_b8feo_thermo.dat
-[...]
-Loaded source file: data/solomatovacaracas2021/solomatovacaracas2021_source.toml
-Loaded source file: data/fischer2011/fischer2011_source.toml
-[...]
-Loaded EOS file: data/dorogokupets2017/dorogokupets2017_liquidfe_eos.toml
-Loaded EOS file: data/dorogokupets2017/dorogokupets2017_fccfe_eos.toml
-All data loaded successfully from ./data.
-Database located at './data' loaded successfully.
-
-All tests passed. Please use the 'EOSdatabase_demo_*.' notebook to verify that your entry has the expected behavior.
-```
-
-As indicated in the last line, this script merely verifies that all modules are imported and all files are loaded. It does not guarantee that various parameters and variables have actually been implemented correctly.
-
-### Pull Request
-If the new content passed all the tests, use git add/commit/push to submit your implementations. Navigate to the forked repository, and make a pull request (PR). The core contributors will verify the PR and validate it or leave comments to resolve.
-
-# Other forms of contribution
+# All contributions are welcome
 
 We welcome all forms of contributions: adding more data, reviewing existing data, adding new features, and overall any improvements to this repository.
+
+# Credits
+
+We are working on our first official release of the PEARL database. In the meantime, if you used PEARL (frontend or backend) please include the following in your acknowledgements:
+```
+This work has benefitted from the PEARL database (https://github.com/an0wen/pearl-database).
+```
